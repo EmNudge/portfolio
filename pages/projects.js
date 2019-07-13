@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "../components/layouts/Main";
 import "./projects.scss";
 
 const Projects = () => (
