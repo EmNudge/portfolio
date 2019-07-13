@@ -22,20 +22,22 @@ const Index = () => {
           </div>
           <p>Calvins-Website:~ guest$ info</p>
           <table>
-            <tr>
-              <td>KEY</td>
-              <td>VALUE</td>
-            </tr>
-            {Object.keys(info).map(key => (
-              <tr key={key}>
-                <td>{key}</td>
-                <td>{JSON.stringify(info[key])}</td>
+            <tbody>
+              <tr>
+                <td>KEY</td>
+                <td>VALUE</td>
               </tr>
-            ))}
-            <tr>
-              <td>hobbies</td>
-              <td>this.passions</td>
-            </tr>
+              {Object.keys(info).map(key => (
+                <tr key={key}>
+                  <td>{key}</td>
+                  <td>{JSON.stringify(info[key])}</td>
+                </tr>
+              ))}
+              <tr>
+                <td>hobbies</td>
+                <td>this.passions</td>
+              </tr>
+            </tbody>
           </table>
           <p>
             Calvins-Website:~ guest$ info <span className="cursor" />

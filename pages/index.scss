@@ -99,6 +99,8 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+    max-width:800px;
+    margin: 0 auto;
     
     li a {
       display: grid;
