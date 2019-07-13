@@ -1,18 +1,10 @@
-import Layout from '../components/Layout';
-import Link from 'next/Link'
+import Layout from '../components/layouts/Main';
 import posts from '../posts/index'
+import PostStub from '../components/PostStub'
 
 const Blog = () => (
     <Layout title="Blog">
-        {posts.map(post => (
-            <Link href={post.path} key={post.title}>
-                <a>
-                    <h3>{post.publishedAt}</h3>
-                    <h1>{post.title}</h1>
-                    <h2>{post.summary}</h2>
-                </a>
-            </Link>
-        ))}
+        {posts.map(post => <PostStub key={post.title} {...post} />)}
     </Layout>
 )
 

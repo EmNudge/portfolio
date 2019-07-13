@@ -9,6 +9,13 @@ const Header = ({ currentRoute }) => {
     { route: "/blog", title: "Blog" }
   ];
 
+  const isRoute = route => {
+    const dirs = route.split('/').slice(1);
+    const currentDirs = currentRoute.split('/').slice(1);
+    return dirs
+      .some(dir => currentDirs.some(currentDir => currentDir === dir))
+  }
+
   return (
     <header className="main-header">
       <Link href="/">
@@ -19,7 +26,7 @@ const Header = ({ currentRoute }) => {
       <nav>
         {pages.map(page => (
           <Link href={page.route} key={page.title}>
-            <a className={page.route === currentRoute ? "selected" : ""}>
+            <a className={isRoute(page.route) ? "selected" : ""}>
               {page.title}
             </a>
           </Link>

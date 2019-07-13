@@ -3,7 +3,7 @@ import Header from "../../Header";
 import Head from '../../Head'
 import './index.scss';
 
-const Layout = ({ metaData: { title, publishedAt }, children }) => { 
+const Layout = ({ title, publishedAt, children }) => { 
   const router = useRouter();
   return (
     <div className="page">

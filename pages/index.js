@@ -1,4 +1,4 @@
-import Layout from "../components/Layout";
+import Layout from "../components/layouts/Main";
 import Console from "../static/console.svg";
 import Waveform from "../static/waveform.svg";
 import codingLinks from "../data/coding-links";
