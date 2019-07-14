@@ -1,21 +1,16 @@
-import Layout from '../../components/layouts/Blog'
+import Layout from "../../components/layouts/Blog";
 
 export const meta = {
   published: true,
-  publishedAt: '2018-05-20',
-  title: 'To Be Or To Ben\'t - The Nonsense of Words',
-  summary: 'A wannabe linguist\'s take on words',
-}
+  publishedAt: "2018-05-20",
+  title: "To Be Or To Ben't - The Nonsense of Words",
+  summary: "A wannabe linguist's take on words"
+};
 
-export default ({ children }) => (
-  <Layout {...meta}>
-    {children}
-  </Layout>
-)
+export default ({children}) => <Layout title={meta.title}>{children}</Layout>;
 
->To be or to ben't? That is the question. Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take arms against a sea of troubles, And, by opposing, end them?
-><br/>  
->-Shakespear
+> To be or to ben't? That is the question. Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take arms against a sea of troubles, And, by opposing, end them?
+>
+> <br /> - Shakespear
 
-The more perspecacious of you might have noticed I took the liberty of slightly altering the first sentence of this famous quote from Shakespear's Hamlet.
-
+The more perspicacious of you might have noticed I took the liberty of slightly altering the first sentence of this famous quote from Shakespear's Hamlet.

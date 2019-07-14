@@ -12,10 +12,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
     "@zeit/next-mdx": "^1.2.0",
+    "@zeit/next-sass": "^1.0.1",
     "babel-plugin-macros": "^2.5.0",
     "babel-plugin-preval": "^3.0.1",
+    "human-date": "^1.4.0",
     "isomorphic-unfetch": "^3.0.0",
     "mdx-prism": "^0.3.1",
     "next": "^9.0.1",
