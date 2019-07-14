@@ -62,12 +62,18 @@ const Index = () => {
             <p>
               Aside from developing, I do voice work for videogames, animations,
               and commercials. No, seriously, I have an{" "}
-              <a href="https://www.imdb.com/name/nm10664016/">IMDb page</a>.
+              <a class="normal" href="https://www.imdb.com/name/nm10664016/">
+                IMDb page
+              </a>
+              .
             </p>
             <p>
               If you want to read more about that, you can head over to my voice
               work website,{" "}
-              <a href="https://emnudge.com">https://emnudge.com</a>.
+              <a class="normal" href="https://emnudge.com">
+                https://emnudge.com
+              </a>
+              .
             </p>
           </div>
           <div className="waveform">
@@ -80,7 +86,7 @@ const Index = () => {
       <div className="block code-links">
         <h1>Coding Links</h1>
         <ul>
-          {codingLinks.map(({ Icon, name, user, url }) => (
+          {codingLinks.map(({Icon, name, user, url}) => (
             <li key={name}>
               <a href={url}>
                 <div>

@@ -66,12 +66,12 @@ blockquote {
 a {
   color: var(--text-color);
   text-decoration: none;
-  &.image-label {
-    font-family: "Merriweather", "Georgia", serif;
-    font-size: 0.8em;
-    display: block;
-    margin-top: -5px;
-  }
+}
+.image-label {
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: 0.8em;
+  display: block;
+  margin-top: -5px;
 }
 
 hr {

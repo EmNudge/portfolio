@@ -41,7 +41,10 @@ body {
 a {
   color: var(--text-color);
   text-decoration: none;
-
+}
+a.normal,
+p a:not(.image-label),
+footer a {
   position: relative;
   z-index: 2;
   &:after {
@@ -50,7 +53,7 @@ a {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 10px;
+    height: 0.4em;
     z-index: -1;
     background: var(--highlight);
   }
