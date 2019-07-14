@@ -7,10 +7,11 @@
 
 body {
   background: #1d2c3e;
+  --text-color: hsl(0, 0%, 90%);
+  --highlight: #6947cc;
 }
 
 .blog-page {
-  --text-color: hsl(0, 0%, 90%);
   min-height: 100vh;
   background: linear-gradient(to top right, #19222c, #1d2c3e);
   color: var(--text-color);
@@ -65,4 +66,20 @@ blockquote {
 a {
   color: var(--text-color);
   text-decoration: none;
+  &.image-label {
+    font-family: "Merriweather", "Georgia", serif;
+    font-size: 0.8em;
+    display: block;
+    margin-top: -5px;
+  }
+}
+
+hr {
+  margin: 40px 0;
+  width: 100%;
+  opacity: 0.05;
+}
+
+footer {
+  padding-bottom: 40px;
 }
