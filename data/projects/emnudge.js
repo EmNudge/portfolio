@@ -1,8 +1,8 @@
 export const meta = {
   image: "emnudge.png",
   isReady: true,
-  title: "EmNudge",
+  title: "Voice Over",
   url: "https://emnudge.com",
-  description: "Console log library for styling console logs",
+  description: "Voice acting and voice over portfolio",
   tags: ["React.js", "Gatsby.js", "Scss"]
 };

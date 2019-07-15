@@ -6,6 +6,8 @@ import ProjectBanner from "../components/ProjectBanner";
 const Projects = () => {
   const [searchTags, setSearchTags] = React.useState([]);
 
+  const [rerenderForcer, setRerenderForcer] = React.useState(1);
+
   const addTag = tag => {
     if (searchTags.includes(tag)) return;
     setSearchTags([...searchTags, tag]);
@@ -15,20 +17,26 @@ const Projects = () => {
     if (!searchTags.length) return projects;
 
     return projects.filter(project =>
-      project.tags.some(tag => searchTags.some(searchTag => searchTag === tag))
+      searchTags.every(tag => project.tags.includes(tag))
     );
+  };
+
+  const handleChange = tag => {
+    setRerenderForcer(rerenderForcer * -1);
+    setSearchTags(tag);
   };
 
   return (
     <Layout title="Projects">
-      <Searchbox
-        tags={tags}
-        addedTags={searchTags}
-        onChange={tags => setSearchTags(tags)}
-      />
-      <div className="projects-container">
-        {getFilteredProjects().map(project => (
-          <ProjectBanner onTagClick={addTag} key={project.title} {...project} />
+      <Searchbox tags={tags} addedTags={searchTags} onChange={handleChange} />
+      <div className="projects-container" key={rerenderForcer}>
+        {getFilteredProjects().map((project, index) => (
+          <ProjectBanner
+            animationDelay={`.${index * 2}s`}
+            onTagClick={addTag}
+            key={project.title}
+            {...project}
+          />
         ))}
       </div>
     </Layout>

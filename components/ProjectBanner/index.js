@@ -1,7 +1,15 @@
 import "./index.scss";
 
-const ProjectBanner = ({title, url, description, tags, image, onTagClick}) => (
-  <div className="project-banner">
+const ProjectBanner = ({
+  title,
+  url,
+  description,
+  tags,
+  image,
+  onTagClick,
+  animationDelay
+}) => (
+  <div className="project-banner" style={{animationDelay: animationDelay}}>
     <img src={image} alt={`${title} image`} />
     <div className="main">
       <h1>{title}</h1>

@@ -178,12 +178,16 @@ var ProjectBanner = function ProjectBanner(_ref) {
       description = _ref.description,
       tags = _ref.tags,
       image = _ref.image,
-      onTagClick = _ref.onTagClick;
+      onTagClick = _ref.onTagClick,
+      animationDelay = _ref.animationDelay;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "project-banner",
+    style: {
+      animationDelay: animationDelay
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 4
+      lineNumber: 12
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -191,20 +195,20 @@ var ProjectBanner = function ProjectBanner(_ref) {
     alt: "".concat(title, " image"),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 13
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "main",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 14
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 15
     },
     __self: this
   }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
@@ -212,20 +216,20 @@ var ProjectBanner = function ProjectBanner(_ref) {
     href: url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 16
     },
     __self: this
   }, url), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 19
     },
     __self: this
   }, description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "tags",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 21
     },
     __self: this
   }, tags.map(function (tag) {
@@ -236,7 +240,7 @@ var ProjectBanner = function ProjectBanner(_ref) {
       key: tag,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 15
+        lineNumber: 23
       },
       __self: this
     }, tag);
@@ -301,29 +305,35 @@ var Searchbox = function Searchbox(_ref) {
   };
 
   var handleKeyDown = function handleKeyDown(e) {
-    if (e.keyCode !== 13) return;
-    addTag(getTags()[0]);
+    if (e.key === "Enter") addTag(getTags()[0]);
+    if (e.key === "Backspace") removeTag(addedTags[addedTags.length - 1]);
+  };
+
+  var handleTagClick = function handleTagClick(tag) {
+    console.log("THING CLICKED");
+    setIsFocues(true);
+    addTag(tag);
   };
 
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "search-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 36
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
     htmlFor: "search-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 37
     },
     __self: this
   }, "Search"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "input-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
@@ -341,16 +351,17 @@ var Searchbox = function Searchbox(_ref) {
       return setIsFocues(false);
     },
     onKeyDown: handleKeyDown,
+    autoComplete: "off",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 39
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "added-tags",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 50
     },
     __self: this
   }, addedTags.map(function (tag) {
@@ -358,13 +369,13 @@ var Searchbox = function Searchbox(_ref) {
       key: tag,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 45
+        lineNumber: 52
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 46
+        lineNumber: 53
       },
       __self: this
     }, tag), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
@@ -374,13 +385,13 @@ var Searchbox = function Searchbox(_ref) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 47
+        lineNumber: 54
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 48
+        lineNumber: 55
       },
       __self: this
     }, "x")));
@@ -388,18 +399,18 @@ var Searchbox = function Searchbox(_ref) {
     className: "tags-container" + (isFocused ? " open" : ""),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 61
     },
     __self: this
   }, getTags().map(function (tag) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       onClick: function onClick() {
-        return addTag(tag);
+        return handleTagClick(tag);
       },
       key: tag,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 56
+        lineNumber: 63
       },
       __self: this
     }, tag);
@@ -11207,14 +11218,16 @@ module.exports = function(module) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _components_layouts_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layouts/Main */ "./components/layouts/Main/index.js");
-/* harmony import */ var _components_Searchbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Searchbox */ "./components/Searchbox/index.js");
-/* harmony import */ var _projects_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../projects/index */ "./projects/index.js");
-/* harmony import */ var _projects_index__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_projects_index__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_ProjectBanner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ProjectBanner */ "./components/ProjectBanner/index.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_layouts_Main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/layouts/Main */ "./components/layouts/Main/index.js");
+/* harmony import */ var _components_Searchbox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Searchbox */ "./components/Searchbox/index.js");
+/* harmony import */ var _projects_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../projects/index */ "./projects/index.js");
+/* harmony import */ var _projects_index__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_projects_index__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _components_ProjectBanner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ProjectBanner */ "./components/ProjectBanner/index.js");
+
 
 
 var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\pages\\projects.js";
@@ -11223,50 +11236,70 @@ var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\
 
 
 
-var projectMetas = _projects_index__WEBPACK_IMPORTED_MODULE_5___default.a.projects,
-    tags = _projects_index__WEBPACK_IMPORTED_MODULE_5___default.a.tags;
 
 var Projects = function Projects() {
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState([]),
-      _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState, 2),
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_3___default.a.useState([]),
+      _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_React$useState, 2),
       searchTags = _React$useState2[0],
       setSearchTags = _React$useState2[1];
 
-  console.log({
-    projectMetas: projectMetas
-  });
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_layouts_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_3___default.a.useState(1),
+      _React$useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_React$useState3, 2),
+      rerenderForcer = _React$useState4[0],
+      setRerenderForcer = _React$useState4[1];
+
+  var addTag = function addTag(tag) {
+    if (searchTags.includes(tag)) return;
+    setSearchTags([].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(searchTags), [tag]));
+  };
+
+  var getFilteredProjects = function getFilteredProjects() {
+    if (!searchTags.length) return _projects_index__WEBPACK_IMPORTED_MODULE_6__["projects"];
+    return _projects_index__WEBPACK_IMPORTED_MODULE_6__["projects"].filter(function (project) {
+      return searchTags.every(function (tag) {
+        return project.tags.includes(tag);
+      });
+    });
+  };
+
+  var handleChange = function handleChange(tag) {
+    setRerenderForcer(rerenderForcer * -1);
+    setSearchTags(tag);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_layouts_Main__WEBPACK_IMPORTED_MODULE_4__["default"], {
     title: "Projects",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 30
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Searchbox__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    tags: tags,
+  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_Searchbox__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    tags: _projects_index__WEBPACK_IMPORTED_MODULE_6__["tags"],
     addedTags: searchTags,
-    onChange: function onChange(tags) {
-      return setSearchTags(tags);
-    },
+    onChange: handleChange,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14
+      lineNumber: 31
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
     className: "projects-container",
+    key: rerenderForcer,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 32
     },
     __self: this
-  }, projectMetas.map(function (project) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_ProjectBanner__WEBPACK_IMPORTED_MODULE_6__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+  }, getFilteredProjects().map(function (project, index) {
+    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_ProjectBanner__WEBPACK_IMPORTED_MODULE_7__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      animationDelay: ".".concat(index * 2, "s"),
+      onTagClick: addTag,
       key: project.title
     }, project, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 21
+        lineNumber: 34
       },
       __self: this
     }));
@@ -11290,9 +11323,9 @@ var Projects = function Projects() {
 var projects = [{
   "image": "/static/projects/emnudge.png",
   "isReady": true,
-  "title": "EmNudge",
+  "title": "Voice Over",
   "url": "https://emnudge.com",
-  "description": "Console log library for styling console logs",
+  "description": "Voice acting and voice over portfolio",
   "tags": ["React.js", "Gatsby.js", "Scss"],
   "index": 0
 }, {
@@ -11304,13 +11337,21 @@ var projects = [{
   "tags": ["Vue.js", "Firebase", "Particles.js", "anime.js", "Scss"],
   "index": 1
 }, {
+  "image": "/static/projects/kipperman.png",
+  "isReady": true,
+  "title": "Portfolio",
+  "url": "https://kipperman.co",
+  "description": "Web development portfolio",
+  "tags": ["React.js", "Next.js", "Scss", "Mdx", "human-date"],
+  "index": 2
+}, {
   "image": "/static/projects/pushover.png",
   "isReady": true,
   "title": "Pushover",
   "url": "https://github.com/EmNudge/pushover",
   "description": "Discord bot built for team management",
   "tags": ["Discord.js", "Firebase", "Mongo DB", "Node.js", "node-cron"],
-  "index": 2
+  "index": 3
 }, {
   "image": "/static/projects/styledlogs.png",
   "isReady": true,
@@ -11318,9 +11359,9 @@ var projects = [{
   "url": "https://github.com/EmNudge/Styled-Logs",
   "description": "Console log library for styling console logs",
   "tags": ["Vanilla.js"],
-  "index": 3
+  "index": 4
 }];
-var tags = ["React.js", "Gatsby.js", "Scss", "Vue.js", "Firebase", "Particles.js", "anime.js", "Discord.js", "Mongo DB", "Node.js", "node-cron", "Vanilla.js"];
+var tags = ["React.js", "Gatsby.js", "Scss", "Vue.js", "Firebase", "Particles.js", "anime.js", "Next.js", "Mdx", "human-date", "Discord.js", "Mongo DB", "Node.js", "node-cron", "Vanilla.js"];
 module.exports = {
   projects: projects,
   tags: tags

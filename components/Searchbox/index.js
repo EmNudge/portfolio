@@ -22,8 +22,8 @@ const Searchbox = ({tags, addedTags, onChange}) => {
   };
 
   const handleKeyDown = e => {
-    if (e.keyCode !== 13) return;
-    addTag(getTags()[0]);
+    if (e.key === "Enter") addTag(getTags()[0]);
+    if (e.key === "Backspace") removeTag(addedTags[addedTags.length - 1]);
   };
 
   const handleTagClick = tag => {
@@ -60,7 +60,7 @@ const Searchbox = ({tags, addedTags, onChange}) => {
       </div>
       <div className={"tags-container" + (isFocused ? " open" : "")}>
         {getTags().map(tag => (
-          <div onClick={handleTagClick} key={tag}>
+          <div onClick={() => handleTagClick(tag)} key={tag}>
             {tag}
           </div>
         ))}
