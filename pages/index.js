@@ -62,7 +62,9 @@ const Index = () => {
             <p>
               Aside from developing, I do voice work for videogames, animations,
               and commercials. No, seriously, I have an{" "}
-              <a class="normal" href="https://www.imdb.com/name/nm10664016/">
+              <a
+                className="normal"
+                href="https://www.imdb.com/name/nm10664016/">
                 IMDb page
               </a>
               .
@@ -70,7 +72,7 @@ const Index = () => {
             <p>
               If you want to read more about that, you can head over to my voice
               work website,{" "}
-              <a class="normal" href="https://emnudge.com">
+              <a className="normal" href="https://emnudge.com">
                 https://emnudge.com
               </a>
               .
