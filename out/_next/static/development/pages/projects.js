@@ -155,6 +155,261 @@ var Header = function Header(_ref) {
 
 /***/ }),
 
+/***/ "./components/ProjectBanner/index.js":
+/*!*******************************************!*\
+  !*** ./components/ProjectBanner/index.js ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./components/ProjectBanner/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\ProjectBanner\\index.js";
+
+
+
+var ProjectBanner = function ProjectBanner(_ref) {
+  var title = _ref.title,
+      url = _ref.url,
+      description = _ref.description,
+      tags = _ref.tags,
+      image = _ref.image,
+      onTagClick = _ref.onTagClick;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "project-banner",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    src: image,
+    alt: "".concat(title, " image"),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "main",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "normal",
+    href: url,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, url), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "tags",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, tags.map(function (tag) {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+      onClick: function onClick() {
+        return onTagClick(tag);
+      },
+      key: tag,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, tag);
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (ProjectBanner);
+
+/***/ }),
+
+/***/ "./components/Searchbox/index.js":
+/*!***************************************!*\
+  !*** ./components/Searchbox/index.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.scss */ "./components/Searchbox/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_3__);
+
+
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\Searchbox\\index.js";
+
+
+
+var Searchbox = function Searchbox(_ref) {
+  var tags = _ref.tags,
+      addedTags = _ref.addedTags,
+      onChange = _ref.onChange;
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(""),
+      _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState, 2),
+      search = _React$useState2[0],
+      setSearch = _React$useState2[1];
+
+  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(false),
+      _React$useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState3, 2),
+      isFocused = _React$useState4[0],
+      setIsFocues = _React$useState4[1];
+
+  var getTags = function getTags() {
+    return tags.filter(function (tag) {
+      return tag.toUpperCase().includes(search.toUpperCase()) && !addedTags.includes(tag);
+    });
+  };
+
+  var addTag = function addTag(tag) {
+    onChange([tag].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(addedTags)));
+    setSearch("");
+  };
+
+  var removeTag = function removeTag(tag) {
+    onChange(addedTags.filter(function (addedTag) {
+      return addedTag !== tag;
+    }));
+  };
+
+  var handleKeyDown = function handleKeyDown(e) {
+    if (e.keyCode !== 13) return;
+    addTag(getTags()[0]);
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "search-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
+    htmlFor: "search-box",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, "Search"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "input-row",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
+    id: "search-box",
+    type: "text",
+    placeholder: "Start typing...",
+    value: search,
+    onChange: function onChange(e) {
+      return setSearch(e.target.value);
+    },
+    onFocus: function onFocus() {
+      return setIsFocues(true);
+    },
+    onBlur: function onBlur() {
+      return setIsFocues(false);
+    },
+    onKeyDown: handleKeyDown,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "added-tags",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, addedTags.map(function (tag) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      key: tag,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46
+      },
+      __self: this
+    }, tag), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "remove-btn",
+      onClick: function onClick() {
+        return removeTag(tag);
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, "x")));
+  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "tags-container" + (isFocused ? " open" : ""),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: this
+  }, getTags().map(function (tag) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      onClick: function onClick() {
+        return addTag(tag);
+      },
+      key: tag,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 56
+      },
+      __self: this
+    }, tag);
+  })));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Searchbox);
+
+/***/ }),
+
 /***/ "./components/layouts/Main/index.js":
 /*!******************************************!*\
   !*** ./components/layouts/Main/index.js ***!
@@ -635,6 +890,39 @@ function _createClass(Constructor, protoProps, staticProps) {
   if (protoProps) _defineProperties(Constructor.prototype, protoProps);
   if (staticProps) _defineProperties(Constructor, staticProps);
   return Constructor;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _extends; });
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../core-js/object/assign */ "./node_modules/@babel/runtime-corejs2/core-js/object/assign.js");
+/* harmony import */ var _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_core_js_object_assign__WEBPACK_IMPORTED_MODULE_0__);
+
+function _extends() {
+  _extends = _core_js_object_assign__WEBPACK_IMPORTED_MODULE_0___default.a || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
 }
 
 /***/ }),
@@ -10918,51 +11206,125 @@ module.exports = function(module) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layouts_Main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layouts/Main */ "./components/layouts/Main/index.js");
-/* harmony import */ var _projects_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./projects.scss */ "./pages/projects.scss");
-/* harmony import */ var _projects_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_projects_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_layouts_Main__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/layouts/Main */ "./components/layouts/Main/index.js");
+/* harmony import */ var _components_Searchbox__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/Searchbox */ "./components/Searchbox/index.js");
+/* harmony import */ var _projects_index__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../projects/index */ "./projects/index.js");
+/* harmony import */ var _projects_index__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_projects_index__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_ProjectBanner__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/ProjectBanner */ "./components/ProjectBanner/index.js");
+
+
 var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\pages\\projects.js";
 
 
 
 
+
+var projectMetas = _projects_index__WEBPACK_IMPORTED_MODULE_5___default.a.projects,
+    tags = _projects_index__WEBPACK_IMPORTED_MODULE_5___default.a.tags;
+
 var Projects = function Projects() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_layouts_Main__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState([]),
+      _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState, 2),
+      searchTags = _React$useState2[0],
+      setSearchTags = _React$useState2[1];
+
+  console.log({
+    projectMetas: projectMetas
+  });
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_layouts_Main__WEBPACK_IMPORTED_MODULE_3__["default"], {
     title: "Projects",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 13
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "search-container",
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_Searchbox__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    tags: tags,
+    addedTags: searchTags,
+    onChange: function onChange(tags) {
+      return setSearchTags(tags);
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 14
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-    htmlFor: "search-box",
+  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "projects-container",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 19
     },
     __self: this
-  }, "Search"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-    id: "search-box",
-    type: "text",
-    placeholder: "Start typing...",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
+  }, projectMetas.map(function (project) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_ProjectBanner__WEBPACK_IMPORTED_MODULE_6__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      key: project.title
+    }, project, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }));
   })));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Projects);
+
+/***/ }),
+
+/***/ "./projects/index.js":
+/*!***************************!*\
+  !*** ./projects/index.js ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var projects = [{
+  "image": "/static/projects/emnudge.png",
+  "isReady": true,
+  "title": "EmNudge",
+  "url": "https://emnudge.com",
+  "description": "Console log library for styling console logs",
+  "tags": ["React.js", "Gatsby.js", "Scss"],
+  "index": 0
+}, {
+  "image": "/static/projects/kaff.png",
+  "isReady": true,
+  "title": "KAFF",
+  "url": "https://kaffsoftware.com",
+  "description": "Games company website made with Vue.js and firebase",
+  "tags": ["Vue.js", "Firebase", "Particles.js", "anime.js", "Scss"],
+  "index": 1
+}, {
+  "image": "/static/projects/pushover.png",
+  "isReady": true,
+  "title": "Pushover",
+  "url": "https://github.com/EmNudge/pushover",
+  "description": "Discord bot built for team management",
+  "tags": ["Discord.js", "Firebase", "Mongo DB", "Node.js", "node-cron"],
+  "index": 2
+}, {
+  "image": "/static/projects/styledlogs.png",
+  "isReady": true,
+  "title": "Styled Logs",
+  "url": "https://github.com/EmNudge/Styled-Logs",
+  "description": "Console log library for styling console logs",
+  "tags": ["Vanilla.js"],
+  "index": 3
+}];
+var tags = ["React.js", "Gatsby.js", "Scss", "Vue.js", "Firebase", "Particles.js", "anime.js", "Discord.js", "Mongo DB", "Node.js", "node-cron", "Vanilla.js"];
+module.exports = {
+  projects: projects,
+  tags: tags
+};
 
 /***/ }),
 
@@ -11010,7 +11372,7 @@ var SvgLogo = function SvgLogo(props) {
 
 /***/ }),
 
-/***/ 11:
+/***/ 0:
 /*!*******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cprojects.js ***!
   \*******************************************************************************************************************************************************************/
@@ -11033,5 +11395,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[11,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=projects.js.map

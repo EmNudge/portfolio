@@ -26,6 +26,12 @@ const Searchbox = ({tags, addedTags, onChange}) => {
     addTag(getTags()[0]);
   };
 
+  const handleTagClick = tag => {
+    console.log("THING CLICKED");
+    setIsFocues(true);
+    addTag(tag);
+  };
+
   return (
     <div className="search-container">
       <label htmlFor="search-box">Search</label>
@@ -39,6 +45,7 @@ const Searchbox = ({tags, addedTags, onChange}) => {
           onFocus={() => setIsFocues(true)}
           onBlur={() => setIsFocues(false)}
           onKeyDown={handleKeyDown}
+          autoComplete="off"
         />
         <div className="added-tags">
           {addedTags.map(tag => (
@@ -53,7 +60,7 @@ const Searchbox = ({tags, addedTags, onChange}) => {
       </div>
       <div className={"tags-container" + (isFocused ? " open" : "")}>
         {getTags().map(tag => (
-          <div onClick={() => addTag(tag)} key={tag}>
+          <div onClick={handleTagClick} key={tag}>
             {tag}
           </div>
         ))}

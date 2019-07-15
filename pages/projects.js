@@ -1,13 +1,23 @@
 import Layout from "../components/layouts/Main";
 import Searchbox from "../components/Searchbox";
-import projectsData from "../projects/index";
+import {projects, tags} from "../projects/index";
 import ProjectBanner from "../components/ProjectBanner";
-
-const {projects: projectMetas, tags} = projectsData;
 
 const Projects = () => {
   const [searchTags, setSearchTags] = React.useState([]);
-  console.log({projectMetas});
+
+  const addTag = tag => {
+    if (searchTags.includes(tag)) return;
+    setSearchTags([...searchTags, tag]);
+  };
+
+  const getFilteredProjects = () => {
+    if (!searchTags.length) return projects;
+
+    return projects.filter(project =>
+      project.tags.some(tag => searchTags.some(searchTag => searchTag === tag))
+    );
+  };
 
   return (
     <Layout title="Projects">
@@ -17,8 +27,8 @@ const Projects = () => {
         onChange={tags => setSearchTags(tags)}
       />
       <div className="projects-container">
-        {projectMetas.map(project => (
-          <ProjectBanner key={project.title} {...project} />
+        {getFilteredProjects().map(project => (
+          <ProjectBanner onTagClick={addTag} key={project.title} {...project} />
         ))}
       </div>
     </Layout>

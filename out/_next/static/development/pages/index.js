@@ -256,24 +256,24 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ([{
   Icon: _static_companies_github_svg__WEBPACK_IMPORTED_MODULE_2__["default"],
-  name: 'Github',
-  user: 'EmNudge',
-  url: 'https://github.com/EmNudge'
+  name: "Github",
+  user: "EmNudge",
+  url: "https://github.com/EmNudge"
 }, {
   Icon: _static_companies_codepen_svg__WEBPACK_IMPORTED_MODULE_0__["default"],
-  name: 'Codepen',
-  user: 'EmNudge',
-  url: 'https://codepen.io/EmNudge/'
+  name: "Codepen",
+  user: "EmNudge",
+  url: "https://codepen.io/EmNudge/"
 }, {
   Icon: _static_companies_codesandbox_svg__WEBPACK_IMPORTED_MODULE_1__["default"],
-  name: 'CodeSandbox',
-  user: 'EmNudge',
-  url: 'https://codesandbox.io/u/EmNudge/'
+  name: "CodeSandbox",
+  user: "EmNudge",
+  url: "https://codesandbox.io/u/EmNudge/"
 }, {
   Icon: _static_companies_dev_svg__WEBPACK_IMPORTED_MODULE_3__["default"],
-  name: 'Dev.to',
-  user: 'EmNudge',
-  url: 'https://dev.to/emnudge'
+  name: "Dev.to",
+  user: "EmNudge",
+  url: "https://dev.to/emnudge"
 }]);
 
 /***/ }),
@@ -11198,7 +11198,7 @@ var Index = function Index() {
     },
     __self: this
   }, "Aside from developing, I do voice work for videogames, animations, and commercials. No, seriously, I have an", " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    "class": "normal",
+    className: "normal",
     href: "https://www.imdb.com/name/nm10664016/",
     __source: {
       fileName: _jsxFileName,
@@ -11208,54 +11208,54 @@ var Index = function Index() {
   }, "IMDb page"), "."), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("p", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 72
     },
     __self: this
   }, "If you want to read more about that, you can head over to my voice work website,", " ", react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
-    "class": "normal",
+    className: "normal",
     href: "https://emnudge.com",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 75
     },
     __self: this
   }, "https://emnudge.com"), ".")), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "waveform",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 81
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "svg",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 82
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_static_waveform_svg__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 83
     },
     __self: this
   }))))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "block code-links",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 86
+      lineNumber: 88
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 89
     },
     __self: this
   }, "Coding Links"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 88
+      lineNumber: 90
     },
     __self: this
   }, _data_coding_links__WEBPACK_IMPORTED_MODULE_6__["default"].map(function (_ref) {
@@ -11267,44 +11267,44 @@ var Index = function Index() {
       key: name,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 90
+        lineNumber: 92
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
       href: url,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 91
+        lineNumber: 93
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 92
+        lineNumber: 94
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Icon, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93
+        lineNumber: 95
       },
       __self: this
     })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 95
+        lineNumber: 97
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 96
+        lineNumber: 98
       },
       __self: this
     }, name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 97
+        lineNumber: 99
       },
       __self: this
     }, user))));
@@ -11627,7 +11627,7 @@ var SvgWaveform = function SvgWaveform(props) {
 
 /***/ }),
 
-/***/ 5:
+/***/ 7:
 /*!********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cindex.js ***!
   \********************************************************************************************************************************************************/
@@ -11650,5 +11650,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js","styles"]]]);
+},[[7,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map
