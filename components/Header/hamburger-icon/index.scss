@@ -1,0 +1,28 @@
+.hamburger-icon {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  width: 35px;
+  height: 20px;
+
+  div {
+    border-radius: 5px;
+    background: white;
+    height: 4px;
+    transition: 0.5s;
+  }
+
+  transition: 0.7s;
+  &.close-icon {
+    transform: rotate(360deg);
+    .top {
+      transform: rotate(45deg) translate(6px, 8px);
+    }
+    .mid {
+      transform: rotate(-45deg);
+    }
+    .bottom {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+  }
+}

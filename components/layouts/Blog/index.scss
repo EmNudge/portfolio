@@ -23,6 +23,7 @@ article {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 0 20px;
 
   > * {
     max-width: 800px;
@@ -53,6 +54,12 @@ article {
   main {
     font-size: 1.2em;
     line-height: 1.75;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  img {
+    width: 90vw;
   }
 }
 
