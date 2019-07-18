@@ -1,6 +1,7 @@
 .block {
+  margin: 0 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 60px;
   min-height: 330px;
   padding: 100px 0;
@@ -27,6 +28,9 @@
 .console {
   position: relative;
   z-index: 2;
+  max-width: 500px;
+  margin: 0 auto;
+
   .svg {
     position: absolute;
     top: 0;
@@ -82,13 +86,23 @@
 .waveform {
   position: relative;
   z-index: 2;
+  height: 300px;
 
   .svg {
+    svg {
+      max-width: 400px;
+    }
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: -1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .waveform {
+    display: none;
   }
 }
 

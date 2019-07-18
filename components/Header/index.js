@@ -7,6 +7,15 @@ const Header = ({currentRoute}) => {
   const [isOpen, setIsOpen] = React.useState(false);
   let drawer = React.createRef();
 
+  const openSideNav = enable => {
+    document.querySelector("body").style.overflow = enable ? "" : "hidden";
+    setIsOpen(!enable);
+  };
+
+  React.useEffect(() => {
+    return () => openSideNav(true);
+  }, []);
+
   const pages = [
     {route: "/", title: "About"},
     {route: "/projects", title: "Projects"},
@@ -21,16 +30,15 @@ const Header = ({currentRoute}) => {
 
   const pressOutside = e => {
     if (!drawer.current) return;
-    console.log(drawer);
     if (drawer.current.contains(e.target)) return;
-    if (isOpen) setIsOpen(false);
+    if (isOpen) openSideNav(false);
   };
 
   React.useEffect(() => {
-    document.addEventListener("mousdown", pressOutside, false);
+    document.addEventListener("mousedown", pressOutside, false);
     document.addEventListener("touchstart", pressOutside, false);
     return () => {
-      document.removeEventListener("mousdown", pressOutside, false);
+      document.removeEventListener("mousedown", pressOutside, false);
       document.removeEventListener("touchend", pressOutside, false);
     };
   });
@@ -43,8 +51,6 @@ const Header = ({currentRoute}) => {
         </a>
       </Link>
       <nav>
-        <HamburgerIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
-
         <div ref={drawer} className={"drawer" + (isOpen ? "" : " closed")}>
           {pages.map(page => (
             <Link href={page.route} key={page.title}>
@@ -54,6 +60,7 @@ const Header = ({currentRoute}) => {
             </Link>
           ))}
         </div>
+        <HamburgerIcon isOpen={isOpen} onClick={() => openSideNav(!isOpen)} />
       </nav>
     </header>
   );

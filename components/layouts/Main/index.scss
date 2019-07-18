@@ -9,6 +9,8 @@ body {
   background: #1d2c3e;
   --text-color: hsl(0, 0%, 90%);
   --highlight: #6947cc;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .page {
