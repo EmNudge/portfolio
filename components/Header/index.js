@@ -7,14 +7,14 @@ const Header = ({currentRoute}) => {
   const [isOpen, setIsOpen] = React.useState(false);
   let drawer = React.createRef();
 
-  const openSideNav = enable => {
+  const setScrollTo = enable => {
     document.querySelector("body").style.overflow = enable ? "" : "hidden";
-    setIsOpen(!enable);
   };
 
   React.useEffect(() => {
-    return () => openSideNav(true);
-  }, []);
+    setScrollTo(!isOpen);
+    return () => setScrollTo(true);
+  }, [isOpen]);
 
   const pages = [
     {route: "/", title: "About"},
@@ -31,7 +31,7 @@ const Header = ({currentRoute}) => {
   const pressOutside = e => {
     if (!drawer.current) return;
     if (drawer.current.contains(e.target)) return;
-    if (isOpen) openSideNav(false);
+    if (isOpen) setIsOpen(false);
   };
 
   React.useEffect(() => {
@@ -60,7 +60,7 @@ const Header = ({currentRoute}) => {
             </Link>
           ))}
         </div>
-        <HamburgerIcon isOpen={isOpen} onClick={() => openSideNav(!isOpen)} />
+        <HamburgerIcon isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       </nav>
     </header>
   );

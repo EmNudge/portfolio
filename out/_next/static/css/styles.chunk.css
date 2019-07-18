@@ -1,11 +1,37 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap);
+.hamburger-icon {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5px;
+  width: 35px;
+  height: 20px;
+  position: relative;
+  transition: 0.7s; }
+  .hamburger-icon div {
+    border-radius: 5px;
+    background: white;
+    height: 4px;
+    transition: 0.5s; }
+  .hamburger-icon.close-icon {
+    transform: rotate(360deg); }
+    .hamburger-icon.close-icon .top {
+      transform: rotate(45deg) translate(6px, 8px); }
+    .hamburger-icon.close-icon .mid {
+      transform: rotate(-45deg); }
+    .hamburger-icon.close-icon .bottom {
+      transform: rotate(-45deg) translate(6px, -6px); }
+
 header.main-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
   padding: 40px;
-  max-width: 1300px; }
+  max-width: 1300px;
+  z-index: 100; }
+  header.main-header nav .hamburger-icon {
+    display: none; }
   header.main-header nav .logo {
     height: 50px; }
   header.main-header nav a {
@@ -29,6 +55,30 @@ header.main-header {
       header.main-header nav a:hover:after, header.main-header nav a.selected:after {
         height: 10px; }
 
+@media screen and (max-width: 700px) {
+  header.main-header nav .hamburger-icon {
+    display: grid;
+    z-index: 1000; }
+  header.main-header nav .drawer {
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    padding: 40px;
+    padding-top: 100px;
+    transition: 0.5s; }
+    header.main-header nav .drawer.closed {
+      transform: translate(100%); }
+    header.main-header nav .drawer a {
+      font-size: 32px; } }
+
 * {
   margin: 0;
   padding: 0; }
@@ -36,7 +86,9 @@ header.main-header {
 body {
   background: #1d2c3e;
   --text-color: hsl(0, 0%, 90%);
-  --highlight: #6947cc; }
+  --highlight: #6947cc;
+  box-sizing: border-box;
+  overflow-x: hidden; }
 
 .page {
   min-height: 100vh;
@@ -82,6 +134,8 @@ footer a {
   margin: 0 auto;
   max-width: 600px;
   height: 300px; }
+  .search-container > * {
+    margin: 0 20px; }
   .search-container label {
     display: block;
     padding-left: 10px;
@@ -179,7 +233,10 @@ footer a {
     margin-top: 30px; }
   .project-banner .tags {
     align-self: flex-end;
-    text-align: right; }
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap; }
     .project-banner .tags > span {
       font-size: 0.8em;
       padding: 5px;
@@ -200,9 +257,31 @@ footer a {
     opacity: 1;
     transform: translate(0px); } }
 
+@media screen and (max-width: 500px) {
+  .project-banner .tags span {
+    font-size: 0.7em; } }
+
+.post {
+  margin: 0 auto; }
+  .post > * {
+    margin: 0 20px; }
+  .post .meta {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px; }
+    .post .meta .break {
+      margin: 0 10px; }
+  .post h2 {
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 10px; }
+  .post h3 {
+    font-weight: 300; }
+
 .block {
+  margin: 0 40px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 60px;
   min-height: 330px;
   padding: 100px 0;
@@ -224,6 +303,8 @@ footer a {
 .console {
   position: relative;
   z-index: 2;
+  max-width: 500px;
+  margin: 0 auto;
   font-family: courier;
   padding: 55px 20px;
   box-sizing: border-box;
@@ -265,13 +346,20 @@ footer a {
 
 .waveform {
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  height: 300px; }
   .waveform .svg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: -1; }
+    .waveform .svg svg {
+      max-width: 400px; }
+
+@media screen and (max-width: 800px) {
+  .waveform {
+    display: none; } }
 
 .code-links {
   display: block; }
@@ -280,7 +368,7 @@ footer a {
   .code-links ul {
     list-style: none;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 20px;
     max-width: 800px;
     margin: 0 auto; }
@@ -300,6 +388,81 @@ footer a {
         transition: 0.15s; }
       .code-links ul li a:hover svg > path {
         fill: var(--highlight); }
+
+@media screen and (max-width: 800px) {
+  .code-links .dummy-container {
+    display: flex;
+    justify-content: center; } }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: #1d2c3e;
+  --text-color: hsl(0, 0%, 90%);
+  --highlight: #6947cc; }
+
+.blog-page {
+  min-height: 100vh;
+  background: linear-gradient(to top right, #19222c, #1d2c3e);
+  color: var(--text-color);
+  font-family: Roboto;
+  overflow: hidden; }
+
+article {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 20px; }
+  article > * {
+    max-width: 800px; }
+  article .title {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    text-align: left;
+    width: 100%; }
+    article .title h1 {
+      font-weight: 500;
+      font-size: 2.5em; }
+    article .title .meta {
+      margin-left: 10px;
+      font-weight: 300;
+      margin-bottom: 10px; }
+      article .title .meta .break {
+        margin: 0 10px; }
+  article main {
+    font-size: 1.2em;
+    line-height: 1.75; }
+
+@media screen and (max-width: 700px) {
+  img {
+    width: 90vw; } }
+
+blockquote {
+  border-left: 4px solid grey;
+  padding: 10px 15px;
+  margin: 30px 10px;
+  font-family: "Merriweather", "Georgia", serif; }
+
+a {
+  color: var(--text-color);
+  text-decoration: none; }
+
+.image-label {
+  font-family: "Merriweather", "Georgia", serif;
+  font-size: 0.8em;
+  display: block;
+  margin-top: -5px; }
+
+hr {
+  margin: 40px 0;
+  width: 100%;
+  opacity: 0.05; }
+
+footer {
+  padding-bottom: 40px;
+  line-height: 1.5; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/

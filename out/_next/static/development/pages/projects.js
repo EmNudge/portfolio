@@ -20,36 +20,83 @@ var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\
   var title = _ref.title;
 
   var getTitle = function getTitle() {
-    if (title.length && !title.includes('/')) return title;
+    if (title.length && !title.includes("/")) return title;
     var formattedTitle = title.slice(1).replace(/^\w/, function (_char) {
       return _char.toUpperCase();
     });
-    return !formattedTitle.length ? 'Home' : formattedTitle;
+    return !formattedTitle.length ? "Home" : formattedTitle;
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
-  }, "Kipperman | ", getTitle()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "viewport",
-    content: "initial-scale=1.0, width=device-width",
-    key: "viewport",
+  }, "Kipperman | ", getTitle()));
+});
+
+/***/ }),
+
+/***/ "./components/Header/hamburger-icon/index.js":
+/*!***************************************************!*\
+  !*** ./components/Header/hamburger-icon/index.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./components/Header/hamburger-icon/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\Header\\hamburger-icon\\index.js";
+
+
+
+var HamburgerIcon = function HamburgerIcon(_ref) {
+  var onClick = _ref.onClick,
+      isOpen = _ref.isOpen;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hamburger-icon" + (isOpen ? " close-icon" : ""),
+    onClick: onClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 4
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "top",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mid",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bottom",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
     },
     __self: this
   }));
-});
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HamburgerIcon);
 
 /***/ }),
 
@@ -62,14 +109,18 @@ var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _static_logo_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../static/logo.svg */ "./static/logo.svg");
-/* harmony import */ var next_Link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/Link */ "./node_modules/next/Link.js");
-/* harmony import */ var next_Link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_Link__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.scss */ "./components/Header/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _static_logo_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../static/logo.svg */ "./static/logo.svg");
+/* harmony import */ var next_Link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/Link */ "./node_modules/next/Link.js");
+/* harmony import */ var next_Link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_Link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _hamburger_icon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./hamburger-icon */ "./components/Header/hamburger-icon/index.js");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.scss */ "./components/Header/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_5__);
+
 var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\Header\\index.js";
+
 
 
 
@@ -77,6 +128,24 @@ var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\
 
 var Header = function Header(_ref) {
   var currentRoute = _ref.currentRoute;
+
+  var _React$useState = react__WEBPACK_IMPORTED_MODULE_1___default.a.useState(false),
+      _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_React$useState, 2),
+      isOpen = _React$useState2[0],
+      setIsOpen = _React$useState2[1];
+
+  var drawer = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
+
+  var setScrollTo = function setScrollTo(enable) {
+    document.querySelector("body").style.overflow = enable ? "" : "hidden";
+  };
+
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+    setScrollTo(!isOpen);
+    return function () {
+      return setScrollTo(true);
+    };
+  }, [isOpen]);
   var pages = [{
     route: "/",
     title: "About"
@@ -89,8 +158,8 @@ var Header = function Header(_ref) {
   }];
 
   var isRoute = function isRoute(route) {
-    var dirs = route.split('/').slice(1);
-    var currentDirs = currentRoute.split('/').slice(1);
+    var dirs = route.split("/").slice(1);
+    var currentDirs = currentRoute.split("/").slice(1);
     return dirs.some(function (dir) {
       return currentDirs.some(function (currentDir) {
         return currentDir === dir;
@@ -98,56 +167,88 @@ var Header = function Header(_ref) {
     });
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
+  var pressOutside = function pressOutside(e) {
+    if (!drawer.current) return;
+    if (drawer.current.contains(e.target)) return;
+    if (isOpen) setIsOpen(false);
+  };
+
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+    document.addEventListener("mousedown", pressOutside, false);
+    document.addEventListener("touchstart", pressOutside, false);
+    return function () {
+      document.removeEventListener("mousedown", pressOutside, false);
+      document.removeEventListener("touchend", pressOutside, false);
+    };
+  });
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("header", {
     className: "main-header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 47
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_Link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_Link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 21
+      lineNumber: 48
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     className: "logo",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 49
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_static_logo_svg__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_static_logo_svg__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 50
     },
     __self: this
-  }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 26
+      lineNumber: 53
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    ref: drawer,
+    className: "drawer" + (isOpen ? "" : " closed"),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
     },
     __self: this
   }, pages.map(function (page) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_Link__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_Link__WEBPACK_IMPORTED_MODULE_3___default.a, {
       href: page.route,
       key: page.title,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 28
+        lineNumber: 56
       },
       __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
       className: isRoute(page.route) ? "selected" : "",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 29
+        lineNumber: 57
       },
       __self: this
     }, page.title));
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_hamburger_icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    isOpen: isOpen,
+    onClick: function onClick() {
+      return setIsOpen(!isOpen);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
   })));
 };
 
@@ -11342,7 +11443,7 @@ var projects = [{
   "title": "Portfolio",
   "url": "https://kipperman.co",
   "description": "Web development portfolio",
-  "tags": ["React.js", "Next.js", "Scss", "Mdx", "human-date"],
+  "tags": ["React.js", "Next.js", "Scss", "MDX", "human-date"],
   "index": 2
 }, {
   "image": "/static/projects/pushover.png",
@@ -11361,7 +11462,7 @@ var projects = [{
   "tags": ["Vanilla.js"],
   "index": 4
 }];
-var tags = ["React.js", "Gatsby.js", "Scss", "Vue.js", "Firebase", "Particles.js", "anime.js", "Next.js", "Mdx", "human-date", "Discord.js", "Mongo DB", "Node.js", "node-cron", "Vanilla.js"];
+var tags = ["React.js", "Gatsby.js", "Scss", "Vue.js", "Firebase", "Particles.js", "anime.js", "Next.js", "MDX", "human-date", "Discord.js", "Mongo DB", "Node.js", "node-cron", "Vanilla.js"];
 module.exports = {
   projects: projects,
   tags: tags
@@ -11413,7 +11514,7 @@ var SvgLogo = function SvgLogo(props) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 6:
 /*!*******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cprojects.js ***!
   \*******************************************************************************************************************************************************************/
@@ -11436,5 +11537,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[6,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=projects.js.map

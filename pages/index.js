@@ -87,21 +87,23 @@ const Index = () => {
       </div>
       <div className="block code-links">
         <h1>Coding Links</h1>
-        <ul>
-          {codingLinks.map(({Icon, name, user, url}) => (
-            <li key={name}>
-              <a href={url}>
-                <div>
-                  <Icon />
-                </div>
-                <div>
-                  <h2>{name}</h2>
-                  <h3>{user}</h3>
-                </div>
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="dummy-container">
+          <ul>
+            {codingLinks.map(({Icon, name, user, url}) => (
+              <li key={name}>
+                <a href={url}>
+                  <div>
+                    <Icon />
+                  </div>
+                  <div>
+                    <h2>{name}</h2>
+                    <h3>{user}</h3>
+                  </div>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </Layout>
   );
