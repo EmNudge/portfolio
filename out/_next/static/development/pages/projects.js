@@ -134,7 +134,7 @@ var Header = function Header(_ref) {
       isOpen = _React$useState2[0],
       setIsOpen = _React$useState2[1];
 
-  var drawer = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
+  var drawer = react__WEBPACK_IMPORTED_MODULE_1___default.a.useRef();
 
   var setScrollTo = function setScrollTo(enable) {
     document.querySelector("body").style.overflow = enable ? "" : "hidden";
@@ -388,10 +388,36 @@ var Searchbox = function Searchbox(_ref) {
       isFocused = _React$useState4[0],
       setIsFocues = _React$useState4[1];
 
+  var searchContainer = react__WEBPACK_IMPORTED_MODULE_2___default.a.useRef();
+
   var getTags = function getTags() {
     return tags.filter(function (tag) {
       return tag.toUpperCase().includes(search.toUpperCase()) && !addedTags.includes(tag);
     });
+  };
+
+  var getAddedTags = function getAddedTags() {
+    var width = searchContainer.current ? searchContainer.current.clientWidth : 600;
+    return addedTags.slice(0, width > 550 ? 3 : 2);
+  };
+
+  var getLeftoverTagNum = function getLeftoverTagNum() {
+    var num = addedTags.length - getAddedTags().length;
+    if (num === 0) return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    });
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "leftovers",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }, num);
   };
 
   var addTag = function addTag(tag) {
@@ -406,35 +432,51 @@ var Searchbox = function Searchbox(_ref) {
   };
 
   var handleKeyDown = function handleKeyDown(e) {
-    if (e.key === "Enter") addTag(getTags()[0]);
-    if (e.key === "Backspace") removeTag(addedTags[addedTags.length - 1]);
+    if (e.key === "Enter" && getTags()[0]) {
+      addTag(getTags()[0]);
+    } else if (e.key === "Backspace" && !search) {
+      removeTag(addedTags[addedTags.length - 1]);
+    }
   };
 
-  var handleTagClick = function handleTagClick(tag) {
-    console.log("THING CLICKED");
-    setIsFocues(true);
-    addTag(tag);
+  var pressOutside = function pressOutside(e) {
+    if (!searchContainer.current) return;
+    if (searchContainer.current.contains(e.target)) return;
+    setIsFocues(false);
   };
 
+  react__WEBPACK_IMPORTED_MODULE_2___default.a.useEffect(function () {
+    console.log(searchContainer);
+    document.addEventListener("mousedown", pressOutside, false);
+    document.addEventListener("touchstart", pressOutside, false);
+    return function () {
+      document.removeEventListener("mousedown", pressOutside, false);
+      document.removeEventListener("touchstart", pressOutside, false);
+    };
+  }, []);
   return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "search-container",
+    ref: searchContainer,
+    onClick: function onClick() {
+      return setIsFocues(true);
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 62
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
     htmlFor: "search-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 66
     },
     __self: this
   }, "Search"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "input-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 67
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
@@ -455,28 +497,28 @@ var Searchbox = function Searchbox(_ref) {
     autoComplete: "off",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 68
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "added-tags",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 79
     },
     __self: this
-  }, addedTags.map(function (tag) {
+  }, getAddedTags().map(function (tag) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       key: tag,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 52
+        lineNumber: 81
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 53
+        lineNumber: 82
       },
       __self: this
     }, tag), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
@@ -486,32 +528,32 @@ var Searchbox = function Searchbox(_ref) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 54
+        lineNumber: 83
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 55
+        lineNumber: 84
       },
       __self: this
     }, "x")));
-  }))), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+  }), getLeftoverTagNum())), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "tags-container" + (isFocused ? " open" : ""),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 91
     },
     __self: this
   }, getTags().map(function (tag) {
     return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
       onClick: function onClick() {
-        return handleTagClick(tag);
+        return addTag(tag);
       },
       key: tag,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 63
+        lineNumber: 93
       },
       __self: this
     }, tag);
@@ -11514,7 +11556,7 @@ var SvgLogo = function SvgLogo(props) {
 
 /***/ }),
 
-/***/ 6:
+/***/ 0:
 /*!*******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cprojects.js ***!
   \*******************************************************************************************************************************************************************/
@@ -11537,5 +11579,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[6,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=projects.js.map

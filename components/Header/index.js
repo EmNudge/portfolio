@@ -5,7 +5,7 @@ import "./index.scss";
 
 const Header = ({currentRoute}) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  let drawer = React.createRef();
+  let drawer = React.useRef();
 
   const setScrollTo = enable => {
     document.querySelector("body").style.overflow = enable ? "" : "hidden";

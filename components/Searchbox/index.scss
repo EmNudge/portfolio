@@ -1,11 +1,10 @@
 .search-container {
   margin: 0 auto;
+  padding: 0 20px;
   max-width: 600px;
   height: 300px;
-
-  > * {
-    margin: 0 20px;
-  }
+  position: relative;
+  z-index: 3;
 
   label {
     display: block;
@@ -70,6 +69,12 @@
           }
         }
       }
+
+      .leftovers {
+        padding: 5px;
+        background: white;
+        color: black;
+      }
     }
   }
 
@@ -89,11 +94,19 @@
     }
 
     > div {
+      box-sizing: border-box;
       padding: 10px 20px;
+
       &:hover {
         background: #0d131a;
         cursor: pointer;
       }
     }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .search-container {
+    height: 150px;
   }
 }

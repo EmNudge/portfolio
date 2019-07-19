@@ -134,7 +134,7 @@ var Header = function Header(_ref) {
       isOpen = _React$useState2[0],
       setIsOpen = _React$useState2[1];
 
-  var drawer = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
+  var drawer = react__WEBPACK_IMPORTED_MODULE_1___default.a.useRef();
 
   var setScrollTo = function setScrollTo(enable) {
     document.querySelector("body").style.overflow = enable ? "" : "hidden";
@@ -11735,7 +11735,7 @@ var SvgWaveform = function SvgWaveform(props) {
 
 /***/ }),
 
-/***/ 0:
+/***/ 8:
 /*!********************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cindex.js ***!
   \********************************************************************************************************************************************************/
@@ -11758,5 +11758,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[0,"static/runtime/webpack.js","styles"]]]);
+},[[8,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

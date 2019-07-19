@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap);
 .hamburger-icon {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
@@ -61,7 +60,7 @@ header.main-header {
     z-index: 1000; }
   header.main-header nav .drawer {
     z-index: 10;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     display: flex;
@@ -132,10 +131,11 @@ footer a {
 
 .search-container {
   margin: 0 auto;
+  padding: 0 20px;
   max-width: 600px;
-  height: 300px; }
-  .search-container > * {
-    margin: 0 20px; }
+  height: 300px;
+  position: relative;
+  z-index: 3; }
   .search-container label {
     display: block;
     padding-left: 10px;
@@ -188,6 +188,10 @@ footer a {
           .search-container .input-row .added-tags > span .remove-btn:hover {
             background: #fff2;
             cursor: pointer; }
+      .search-container .input-row .added-tags .leftovers {
+        padding: 5px;
+        background: white;
+        color: black; }
   .search-container .tags-container {
     background: #111821;
     width: 100%;
@@ -201,10 +205,15 @@ footer a {
       overflow-y: auto;
       padding-top: 10px; }
     .search-container .tags-container > div {
+      box-sizing: border-box;
       padding: 10px 20px; }
       .search-container .tags-container > div:hover {
         background: #0d131a;
         cursor: pointer; }
+
+@media screen and (max-width: 700px) {
+  .search-container {
+    height: 150px; } }
 
 .project-banner {
   padding: 20px 40px;
@@ -261,25 +270,8 @@ footer a {
   .project-banner .tags span {
     font-size: 0.7em; } }
 
-.post {
-  margin: 0 auto; }
-  .post > * {
-    margin: 0 20px; }
-  .post .meta {
-    font-size: 14px;
-    font-weight: 300;
-    margin-bottom: 10px; }
-    .post .meta .break {
-      margin: 0 10px; }
-  .post h2 {
-    font-size: 2.5em;
-    font-weight: 400;
-    margin-bottom: 10px; }
-  .post h3 {
-    font-weight: 300; }
-
 .block {
-  margin: 0 40px;
+  margin: 0 20px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 60px;
@@ -393,76 +385,6 @@ footer a {
   .code-links .dummy-container {
     display: flex;
     justify-content: center; } }
-
-* {
-  margin: 0;
-  padding: 0; }
-
-body {
-  background: #1d2c3e;
-  --text-color: hsl(0, 0%, 90%);
-  --highlight: #6947cc; }
-
-.blog-page {
-  min-height: 100vh;
-  background: linear-gradient(to top right, #19222c, #1d2c3e);
-  color: var(--text-color);
-  font-family: Roboto;
-  overflow: hidden; }
-
-article {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin: 0 20px; }
-  article > * {
-    max-width: 800px; }
-  article .title {
-    margin-top: 80px;
-    margin-bottom: 40px;
-    text-align: left;
-    width: 100%; }
-    article .title h1 {
-      font-weight: 500;
-      font-size: 2.5em; }
-    article .title .meta {
-      margin-left: 10px;
-      font-weight: 300;
-      margin-bottom: 10px; }
-      article .title .meta .break {
-        margin: 0 10px; }
-  article main {
-    font-size: 1.2em;
-    line-height: 1.75; }
-
-@media screen and (max-width: 700px) {
-  img {
-    width: 90vw; } }
-
-blockquote {
-  border-left: 4px solid grey;
-  padding: 10px 15px;
-  margin: 30px 10px;
-  font-family: "Merriweather", "Georgia", serif; }
-
-a {
-  color: var(--text-color);
-  text-decoration: none; }
-
-.image-label {
-  font-family: "Merriweather", "Georgia", serif;
-  font-size: 0.8em;
-  display: block;
-  margin-top: -5px; }
-
-hr {
-  margin: 40px 0;
-  width: 100%;
-  opacity: 0.05; }
-
-footer {
-  padding-bottom: 40px;
-  line-height: 1.5; }
 
 
 /*# sourceMappingURL=styles.chunk.css.map*/
