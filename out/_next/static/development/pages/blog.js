@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/blog.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\blog.js"],{
 
 /***/ "./components/Head/index.js":
 /*!**********************************!*\
@@ -13,7 +13,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/head */ "./node_modules/next-server/dist/lib/head.js");
 /* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/Head/index.js";
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\Head\\index.js";
 
 
 /* harmony default export */ __webpack_exports__["default"] = (function (_ref) {
@@ -57,7 +57,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./components/Header/hamburger-icon/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/Header/hamburger-icon/index.js";
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\Header\\hamburger-icon\\index.js";
 
 
 
@@ -119,7 +119,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.scss */ "./components/Header/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_5__);
 
-var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/Header/index.js";
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\Header\\index.js";
 
 
 
@@ -271,7 +271,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_Link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_Link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.scss */ "./components/PostStub/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/PostStub/index.js";
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\PostStub\\index.js";
 
 
 
@@ -346,7 +346,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Head__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Head */ "./components/Head/index.js");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./index.scss */ "./components/layouts/Main/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_4__);
-var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/layouts/Main/index.js";
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\layouts\\Main\\index.js";
 
 
 
@@ -6818,10 +6818,10 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Fblog.js!./":
-/*!***************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Fblog.js ***!
-  \***************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cblog.js!./":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cblog.js ***!
+  \*******************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -11133,7 +11133,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _posts_index__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_posts_index__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _components_PostStub__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/PostStub */ "./components/PostStub/index.js");
 
-var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/pages/blog.js";
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\pages\\blog.js";
 
 
 
@@ -11181,7 +11181,7 @@ var posts = [{
   "summary": "A wannabe linguist's take on words",
   "path": "/blog/to-be-or-to-bent",
   "index": 0,
-  "readTime": 4
+  "readTime": 6
 }];
 module.exports = posts;
 
@@ -11231,14 +11231,14 @@ var SvgLogo = function SvgLogo(props) {
 
 /***/ }),
 
-/***/ 13:
-/*!*******************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fblog&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Fblog.js ***!
-  \*******************************************************************************************************************************************/
+/***/ 6:
+/*!***********************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fblog&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cblog.js ***!
+  \***********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fblog&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Fblog.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Fblog.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fblog&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cblog.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cblog.js!./");
 
 
 /***/ }),
@@ -11254,5 +11254,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[13,"static/runtime/webpack.js","styles"]]]);
+},[[6,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=blog.js.map
