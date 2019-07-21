@@ -60,4 +60,9 @@ typings/
 # next.js build output
 .next
 
-.vscode
+.vscode/
+
+.firebaserc
+firebase.json
+.firebase/
+.out/

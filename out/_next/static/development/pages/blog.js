@@ -20,36 +20,83 @@ var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/Head/i
   var title = _ref.title;
 
   var getTitle = function getTitle() {
-    if (title.length && !title.includes('/')) return title;
+    if (title.length && !title.includes("/")) return title;
     var formattedTitle = title.slice(1).replace(/^\w/, function (_char) {
       return _char.toUpperCase();
     });
-    return !formattedTitle.length ? 'Home' : formattedTitle;
+    return !formattedTitle.length ? "Home" : formattedTitle;
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
-  }, "Kipperman | ", getTitle()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "viewport",
-    content: "initial-scale=1.0, width=device-width",
-    key: "viewport",
+  }, "Kipperman | ", getTitle()));
+});
+
+/***/ }),
+
+/***/ "./components/Header/hamburger-icon/index.js":
+/*!***************************************************!*\
+  !*** ./components/Header/hamburger-icon/index.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./components/Header/hamburger-icon/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\Header\\hamburger-icon\\index.js";
+
+
+
+var HamburgerIcon = function HamburgerIcon(_ref) {
+  var onClick = _ref.onClick,
+      isOpen = _ref.isOpen;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hamburger-icon" + (isOpen ? " close-icon" : ""),
+    onClick: onClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 4
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "top",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mid",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bottom",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
     },
     __self: this
   }));
-});
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HamburgerIcon);
 
 /***/ }),
 
@@ -128,7 +175,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.scss */ "./components/Header/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_5__);
 
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
 var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/Header/index.js";
+
+=======
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\Header\\index.js";
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
 
 
 
@@ -143,7 +195,22 @@ var Header = function Header(_ref) {
       isOpen = _React$useState2[0],
       setIsOpen = _React$useState2[1];
 
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
   var drawer = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
+=======
+  var drawer = react__WEBPACK_IMPORTED_MODULE_1___default.a.useRef();
+
+  var setScrollTo = function setScrollTo(enable) {
+    document.querySelector("body").style.overflow = enable ? "" : "hidden";
+  };
+
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+    setScrollTo(!isOpen);
+    return function () {
+      return setScrollTo(true);
+    };
+  }, [isOpen]);
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
   var pages = [{
     route: "/",
     title: "About"
@@ -167,16 +234,26 @@ var Header = function Header(_ref) {
 
   var pressOutside = function pressOutside(e) {
     if (!drawer.current) return;
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
     console.log(drawer);
+=======
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
     if (drawer.current.contains(e.target)) return;
     if (isOpen) setIsOpen(false);
   };
 
   react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
     document.addEventListener("mousdown", pressOutside, false);
     document.addEventListener("touchstart", pressOutside, false);
     return function () {
       document.removeEventListener("mousdown", pressOutside, false);
+=======
+    document.addEventListener("mousedown", pressOutside, false);
+    document.addEventListener("touchstart", pressOutside, false);
+    return function () {
+      document.removeEventListener("mousedown", pressOutside, false);
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
       document.removeEventListener("touchend", pressOutside, false);
     };
   });
@@ -184,26 +261,39 @@ var Header = function Header(_ref) {
     className: "main-header",
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
       lineNumber: 39
+=======
+      lineNumber: 47
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_Link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
       lineNumber: 40
+=======
+      lineNumber: 48
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     className: "logo",
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
       lineNumber: 41
+=======
+      lineNumber: 49
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_static_logo_svg__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
       lineNumber: 42
     },
     __self: this
@@ -224,11 +314,27 @@ var Header = function Header(_ref) {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+=======
+      lineNumber: 50
+    },
+    __self: this
+  }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 53
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
     ref: drawer,
     className: "drawer" + (isOpen ? "" : " closed"),
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
       lineNumber: 48
+=======
+      lineNumber: 54
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
     },
     __self: this
   }, pages.map(function (page) {
@@ -237,18 +343,40 @@ var Header = function Header(_ref) {
       key: page.title,
       __source: {
         fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
         lineNumber: 50
+=======
+        lineNumber: 56
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
       className: isRoute(page.route) ? "selected" : "",
       __source: {
         fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
         lineNumber: 51
       },
       __self: this
     }, page.title));
   }))));
+=======
+        lineNumber: 57
+      },
+      __self: this
+    }, page.title));
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_hamburger_icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    isOpen: isOpen,
+    onClick: function onClick() {
+      return setIsOpen(!isOpen);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  })));
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -275,6 +403,7 @@ var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/PostSt
 
 
 
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
 var PostStub = function PostStub(_ref) {
   var path = _ref.path,
       publishedAt = _ref.publishedAt,
@@ -286,32 +415,122 @@ var PostStub = function PostStub(_ref) {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
+=======
+  var searchContainer = react__WEBPACK_IMPORTED_MODULE_2___default.a.useRef();
+
+  var getTags = function getTags() {
+    return tags.filter(function (tag) {
+      return tag.toUpperCase().includes(search.toUpperCase()) && !addedTags.includes(tag);
+    });
+  };
+
+  var getAddedTags = function getAddedTags() {
+    var width = searchContainer.current ? searchContainer.current.clientWidth : 600;
+    return addedTags.slice(0, width > 550 ? 3 : 2);
+  };
+
+  var getLeftoverTagNum = function getLeftoverTagNum() {
+    var num = addedTags.length - getAddedTags().length;
+    if (num === 0) return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    });
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "leftovers",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }, num);
+  };
+
+  var addTag = function addTag(tag) {
+    onChange([tag].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(addedTags)));
+    setSearch("");
+  };
+
+  var removeTag = function removeTag(tag) {
+    onChange(addedTags.filter(function (addedTag) {
+      return addedTag !== tag;
+    }));
+  };
+
+  var handleKeyDown = function handleKeyDown(e) {
+    if (e.key === "Enter" && getTags()[0]) {
+      addTag(getTags()[0]);
+    } else if (e.key === "Backspace" && !search) {
+      removeTag(addedTags[addedTags.length - 1]);
+    }
+  };
+
+  var pressOutside = function pressOutside(e) {
+    if (!searchContainer.current) return;
+    if (searchContainer.current.contains(e.target)) return;
+    setIsFocues(false);
+  };
+
+  react__WEBPACK_IMPORTED_MODULE_2___default.a.useEffect(function () {
+    console.log(searchContainer);
+    document.addEventListener("mousedown", pressOutside, false);
+    document.addEventListener("touchstart", pressOutside, false);
+    return function () {
+      document.removeEventListener("mousedown", pressOutside, false);
+      document.removeEventListener("touchstart", pressOutside, false);
+    };
+  }, []);
+  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "search-container",
+    ref: searchContainer,
+    onClick: function onClick() {
+      return setIsFocues(true);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "post",
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
       lineNumber: 6
+=======
+      lineNumber: 66
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "meta",
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
       lineNumber: 7
+=======
+      lineNumber: 67
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
     },
     __self: this
   }, publishedAt, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
     className: "break",
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
       lineNumber: 9
+=======
+      lineNumber: 68
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
     },
     __self: this
   }, "\u25CF"), readTime, " min read"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
       lineNumber: 12
     },
     __self: this
@@ -322,6 +541,62 @@ var PostStub = function PostStub(_ref) {
     },
     __self: this
   }, summary)));
+=======
+      lineNumber: 79
+    },
+    __self: this
+  }, getAddedTags().map(function (tag) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      key: tag,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 81
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 82
+      },
+      __self: this
+    }, tag), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      className: "remove-btn",
+      onClick: function onClick() {
+        return removeTag(tag);
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 83
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 84
+      },
+      __self: this
+    }, "x")));
+  }), getLeftoverTagNum())), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "tags-container" + (isFocused ? " open" : ""),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
+  }, getTags().map(function (tag) {
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      onClick: function onClick() {
+        return addTag(tag);
+      },
+      key: tag,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 93
+      },
+      __self: this
+    }, tag);
+  })));
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (PostStub);
@@ -11173,6 +11448,7 @@ var Blog = function Blog() {
 "use strict";
 
 
+<<<<<<< HEAD:out/_next/static/development/pages/blog.js
 var posts = [{
   "published": true,
   "publishedAt": "July 17th, 2019",
@@ -11183,6 +11459,54 @@ var posts = [{
   "readTime": 2
 }];
 module.exports = posts;
+=======
+var projects = [{
+  "image": "/static/projects/emnudge.png",
+  "isReady": true,
+  "title": "Voice Over",
+  "url": "https://emnudge.com",
+  "description": "Voice acting and voice over portfolio",
+  "tags": ["React.js", "Gatsby.js", "Scss"],
+  "index": 0
+}, {
+  "image": "/static/projects/kaff.png",
+  "isReady": true,
+  "title": "KAFF",
+  "url": "https://kaffsoftware.com",
+  "description": "Games company website made with Vue.js and firebase",
+  "tags": ["Vue.js", "Firebase", "Particles.js", "anime.js", "Scss"],
+  "index": 1
+}, {
+  "image": "/static/projects/kipperman.png",
+  "isReady": true,
+  "title": "Portfolio",
+  "url": "https://kipperman.co",
+  "description": "Web development portfolio",
+  "tags": ["React.js", "Next.js", "Scss", "MDX", "human-date"],
+  "index": 2
+}, {
+  "image": "/static/projects/pushover.png",
+  "isReady": true,
+  "title": "Pushover",
+  "url": "https://github.com/EmNudge/pushover",
+  "description": "Discord bot built for team management",
+  "tags": ["Discord.js", "Firebase", "Mongo DB", "Node.js", "node-cron"],
+  "index": 3
+}, {
+  "image": "/static/projects/styledlogs.png",
+  "isReady": true,
+  "title": "Styled Logs",
+  "url": "https://github.com/EmNudge/Styled-Logs",
+  "description": "Console log library for styling console logs",
+  "tags": ["Vanilla.js"],
+  "index": 4
+}];
+var tags = ["React.js", "Gatsby.js", "Scss", "Vue.js", "Firebase", "Particles.js", "anime.js", "Next.js", "MDX", "human-date", "Discord.js", "Mongo DB", "Node.js", "node-cron", "Vanilla.js"];
+module.exports = {
+  projects: projects,
+  tags: tags
+};
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/projects.js
 
 /***/ }),
 

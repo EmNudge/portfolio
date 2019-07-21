@@ -20,36 +20,83 @@ var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/Head/i
   var title = _ref.title;
 
   var getTitle = function getTitle() {
-    if (title.length && !title.includes('/')) return title;
+    if (title.length && !title.includes("/")) return title;
     var formattedTitle = title.slice(1).replace(/^\w/, function (_char) {
       return _char.toUpperCase();
     });
-    return !formattedTitle.length ? 'Home' : formattedTitle;
+    return !formattedTitle.length ? "Home" : formattedTitle;
   };
 
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_1___default.a, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 13
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 14
     },
     __self: this
-  }, "Kipperman | ", getTitle()), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("meta", {
-    name: "viewport",
-    content: "initial-scale=1.0, width=device-width",
-    key: "viewport",
+  }, "Kipperman | ", getTitle()));
+});
+
+/***/ }),
+
+/***/ "./components/Header/hamburger-icon/index.js":
+/*!***************************************************!*\
+  !*** ./components/Header/hamburger-icon/index.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./components/Header/hamburger-icon/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\Header\\hamburger-icon\\index.js";
+
+
+
+var HamburgerIcon = function HamburgerIcon(_ref) {
+  var onClick = _ref.onClick,
+      isOpen = _ref.isOpen;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "hamburger-icon" + (isOpen ? " close-icon" : ""),
+    onClick: onClick,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 4
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "top",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "mid",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bottom",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
     },
     __self: this
   }));
-});
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (HamburgerIcon);
 
 /***/ }),
 
@@ -128,7 +175,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./index.scss */ "./components/Header/index.scss");
 /* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_5__);
 
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
 var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/Header/index.js";
+
+=======
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\Header\\index.js";
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
 
 
 
@@ -143,7 +195,22 @@ var Header = function Header(_ref) {
       isOpen = _React$useState2[0],
       setIsOpen = _React$useState2[1];
 
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
   var drawer = react__WEBPACK_IMPORTED_MODULE_1___default.a.createRef();
+=======
+  var drawer = react__WEBPACK_IMPORTED_MODULE_1___default.a.useRef();
+
+  var setScrollTo = function setScrollTo(enable) {
+    document.querySelector("body").style.overflow = enable ? "" : "hidden";
+  };
+
+  react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+    setScrollTo(!isOpen);
+    return function () {
+      return setScrollTo(true);
+    };
+  }, [isOpen]);
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
   var pages = [{
     route: "/",
     title: "About"
@@ -167,16 +234,26 @@ var Header = function Header(_ref) {
 
   var pressOutside = function pressOutside(e) {
     if (!drawer.current) return;
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
     console.log(drawer);
+=======
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
     if (drawer.current.contains(e.target)) return;
     if (isOpen) setIsOpen(false);
   };
 
   react__WEBPACK_IMPORTED_MODULE_1___default.a.useEffect(function () {
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
     document.addEventListener("mousdown", pressOutside, false);
     document.addEventListener("touchstart", pressOutside, false);
     return function () {
       document.removeEventListener("mousdown", pressOutside, false);
+=======
+    document.addEventListener("mousedown", pressOutside, false);
+    document.addEventListener("touchstart", pressOutside, false);
+    return function () {
+      document.removeEventListener("mousedown", pressOutside, false);
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
       document.removeEventListener("touchend", pressOutside, false);
     };
   });
@@ -184,32 +261,49 @@ var Header = function Header(_ref) {
     className: "main-header",
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
       lineNumber: 39
+=======
+      lineNumber: 47
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(next_Link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
       lineNumber: 40
+=======
+      lineNumber: 48
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     className: "logo",
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
       lineNumber: 41
+=======
+      lineNumber: 49
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_static_logo_svg__WEBPACK_IMPORTED_MODULE_2__["default"], {
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
       lineNumber: 42
+=======
+      lineNumber: 50
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
     },
     __self: this
   }))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("nav", {
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
       lineNumber: 45
     },
     __self: this
@@ -224,11 +318,21 @@ var Header = function Header(_ref) {
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+=======
+      lineNumber: 53
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
     ref: drawer,
     className: "drawer" + (isOpen ? "" : " closed"),
     __source: {
       fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
       lineNumber: 48
+=======
+      lineNumber: 54
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
     },
     __self: this
   }, pages.map(function (page) {
@@ -237,18 +341,40 @@ var Header = function Header(_ref) {
       key: page.title,
       __source: {
         fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
         lineNumber: 50
+=======
+        lineNumber: 56
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
       className: isRoute(page.route) ? "selected" : "",
       __source: {
         fileName: _jsxFileName,
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
         lineNumber: 51
       },
       __self: this
     }, page.title));
   }))));
+=======
+        lineNumber: 57
+      },
+      __self: this
+    }, page.title));
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_hamburger_icon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    isOpen: isOpen,
+    onClick: function onClick() {
+      return setIsOpen(!isOpen);
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 63
+    },
+    __self: this
+  })));
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -12348,15 +12474,21 @@ var meta = {
       lineNumber: 46
     },
     __self: this
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
   }), "Everything I ever murdered", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_mdx_js_tag__WEBPACK_IMPORTED_MODULE_2__["MDXTag"], {
     name: "br",
     components: components,
     parentName: "p",
+=======
+  }, "Coding Links"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+    className: "dummy-container",
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
     __source: {
       fileName: _jsxFileName,
       lineNumber: 47
     },
     __self: this
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
   }), "Time to separate the sheep from goats (yeah)", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_mdx_js_tag__WEBPACK_IMPORTED_MODULE_2__["MDXTag"], {
     name: "br",
     components: components,
@@ -12384,6 +12516,191 @@ var meta = {
     },
     __self: this
   }, "Wordplay, a staple of hiphop and jokes in general, comes many times from the \"bugs\" of lanuage"));
+=======
+  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("ul", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
+  }, _data_coding_links__WEBPACK_IMPORTED_MODULE_6__["default"].map(function (_ref) {
+    var Icon = _ref.Icon,
+        name = _ref.name,
+        user = _ref.user,
+        url = _ref.url;
+    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("li", {
+      key: name,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 93
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("a", {
+      href: url,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 94
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 95
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(Icon, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 96
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 98
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 99
+      },
+      __self: this
+    }, name), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 100
+      },
+      __self: this
+    }, user))));
+  })))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Index);
+
+/***/ }),
+
+/***/ "./static/companies/codepen.svg":
+/*!**************************************!*\
+  !*** ./static/companies/codepen.svg ***!
+  \**************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+var _ref =
+/*#__PURE__*/
+react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+  d: "M85.765 27.571L45.139.487a2.9 2.9 0 0 0-3.216 0L1.288 27.571A2.894 2.894 0 0 0 0 29.987v27.09a2.928 2.928 0 0 0 1.288 2.417l40.626 27.087a2.89 2.89 0 0 0 3.216 0l40.626-27.087a2.894 2.894 0 0 0 1.288-2.416V29.99a2.844 2.844 0 0 0-1.279-2.419zM43.531 53.586L28.446 43.529l15.085-10.058 15.076 10.058zm2.9-25.15V8.322l32.5 21.668L63.84 40.047 46.427 28.436zm-5.8 0L23.213 40.047 8.128 29.99l32.5-21.668zm-22.65 15.093l-12.18 8.12V35.41zm5.233 3.491l17.412 11.612v20.113L8.128 57.077zm23.214 11.6L63.84 47.012l15.084 10.059-32.5 21.668zm22.644-15.091l12.18-8.12v16.24z",
+  fill: "#fff"
+});
+
+var SvgCodepen = function SvgCodepen(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", _extends({
+    width: 87.045,
+    height: 87.069
+  }, props), _ref);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SvgCodepen);
+
+/***/ }),
+
+/***/ "./static/companies/codesandbox.svg":
+/*!******************************************!*\
+  !*** ./static/companies/codesandbox.svg ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+var _ref =
+/*#__PURE__*/
+react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+  d: "M34.006 76.872V45.483L7.012 29.952v17.893l12.365 7.168v13.456zm7.012.185l14.9-8.583V54.7l12.445-7.212v-17.67L41.017 45.605zM64.766 23.8l-14.373-8.331-12.62 7.323-12.716-7.33-14.5 8.44 27.062 15.57zM0 65.425V21.933L37.683 0l37.691 21.841v43.516L37.682 87.069z",
+  fill: "#fff"
+});
+
+var SvgCodesandbox = function SvgCodesandbox(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", _extends({
+    width: 75.374,
+    height: 87.069
+  }, props), _ref);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SvgCodesandbox);
+
+/***/ }),
+
+/***/ "./static/companies/dev.svg":
+/*!**********************************!*\
+  !*** ./static/companies/dev.svg ***!
+  \**********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+var _ref =
+/*#__PURE__*/
+react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+  d: "M0 20.849V41.7h7.362c8.144 0 11.532-1.042 14.008-4.235 2.476-3.127 2.867-5.864 2.606-18.243-.2-10.946-.326-11.858-1.759-14.2C19.742.977 17.005 0 7.819 0H0zM15.051 8.4c1.5 1.238 1.564 1.5 1.564 12.054 0 10.229-.065 10.881-1.433 12.249-1.108 1.042-2.28 1.433-4.561 1.433l-3.127.065L7.3 20.654 7.167 7.167h3.193A7.212 7.212 0 0 1 15.051 8.4zm14.985-6.706c-1.3 1.694-1.368 2.541-1.368 19.286v17.526L30.3 40.07c1.5 1.564 1.889 1.629 10.425 1.629h8.8V34.6l-6.646-.2-6.711-.2v-9.767l4.1-.2 4.04-.2v-7.1h-8.47V7.167h13.679V0h-9.056C31.4 0 31.339 0 30.036 1.694zm26.648 7.558a6852.9 6852.9 0 0 1 4.952 18.764c2.085 8.014 2.8 9.773 4.561 11.532a6.207 6.207 0 0 0 3.714 2.15c2.02 0 4.626-2.02 5.538-4.365.652-1.694 9.9-36.226 9.9-37.008 0-.2-1.824-.326-4.04-.2l-4.1.2-3.65 14.009c-2.28 8.861-3.779 13.552-4.04 12.705C69 25.41 62.548.586 62.548.261A17.9 17.9 0 0 0 58.378 0h-4.17z",
+  fill: "#fff"
+});
+
+var SvgDev = function SvgDev(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", _extends({
+    width: 85.352,
+    height: 41.699
+  }, props), _ref);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SvgDev);
+
+/***/ }),
+
+/***/ "./static/companies/github.svg":
+/*!*************************************!*\
+  !*** ./static/companies/github.svg ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+var _ref =
+/*#__PURE__*/
+react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+  d: "M36.335 0a36.343 36.343 0 0 0-11.484 70.82c1.818.332 2.481-.787 2.481-1.751 0-.863-.031-3.148-.049-6.181-10.108 2.2-12.24-4.87-12.24-4.87-1.653-4.2-4.036-5.316-4.036-5.316-3.3-2.255.25-2.208.25-2.208 3.647.257 5.566 3.743 5.566 3.743 3.241 5.555 8.506 3.951 10.576 3.02a7.768 7.768 0 0 1 2.307-4.859c-8.069-.917-16.552-4.033-16.552-17.96a14.048 14.048 0 0 1 3.741-9.751 13.055 13.055 0 0 1 .357-9.617s3.049-.977 9.992 3.725a34.461 34.461 0 0 1 18.194 0c6.938-4.7 9.983-3.725 9.983-3.725a13.058 13.058 0 0 1 .364 9.617 14.024 14.024 0 0 1 3.734 9.751c0 13.96-8.5 17.032-16.593 17.931 1.305 1.122 2.467 3.342 2.467 6.73 0 4.859-.045 8.778-.045 9.969 0 .97.656 2.1 2.5 1.747A36.344 36.344 0 0 0 36.337-.001z",
+  fill: "#fff",
+  fillRule: "evenodd"
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
 });
 
 /***/ }),
@@ -12455,10 +12772,53 @@ var SvgLogo = function SvgLogo(props) {
 
 /***/ }),
 
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
 /***/ 8:
 /*!**********************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fblog%2Fto-be-or-to-bent&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Fblog%2Fto-be-or-to-bent.mdx ***!
   \**********************************************************************************************************************************************************************************/
+=======
+/***/ "./static/waveform.svg":
+/*!*****************************!*\
+  !*** ./static/waveform.svg ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+
+
+var _ref =
+/*#__PURE__*/
+react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("path", {
+  "data-name": "Path 6",
+  d: "M5 230.539s59.585-.394 67.182 0 18.518 23.328 24.614 23.352 12.834-113.238 21.753-113.566 21.3 184.165 31.212 184.588S168.968 5.231 179.353 5s22.746 397.986 28.792 398.292S223.936 92.6 236.937 92.177s12.846 231.949 31.192 232.737 13.325-164.967 27.193-164.755 24.72 110.819 28.792 111.17 23.958-63.329 30.392-62.383 18.072 28.823 30.392 29.592 21.421-17.069 31.191-16.8 18.988 12.1 27.193 12 86.376 0 86.376 0",
+  fill: "none",
+  stroke: "#fff",
+  strokeLinecap: "round",
+  strokeWidth: 10
+});
+
+var SvgWaveform = function SvgWaveform(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("svg", _extends({
+    viewBox: "0 0 534.657 408.294"
+  }, props), _ref);
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (SvgWaveform);
+
+/***/ }),
+
+/***/ 8:
+/*!********************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2F&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cindex.js ***!
+  \********************************************************************************************************************************************************/
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -12479,4 +12839,8 @@ module.exports = dll_829b10deddf10e1653a8;
 /***/ })
 
 },[[8,"static/runtime/webpack.js","styles"]]]);
+<<<<<<< HEAD:out/_next/static/development/pages/blog/to-be-or-to-bent.js
 //# sourceMappingURL=to-be-or-to-bent.js.map
+=======
+//# sourceMappingURL=index.js.map
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3:out/_next/static/development/pages/index.js

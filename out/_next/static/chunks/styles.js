@@ -4,6 +4,8 @@
 /*!*****************************************************!*\
   !*** ./components/Header/hamburger-icon/index.scss ***!
   \*****************************************************/
+<<<<<<< HEAD
+=======
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29,7 +31,49 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
+            injectCss(link, link.href.split("?")[0] + "?unix=1563511541264");
+          });
+      }
+    }
+  
+
+/***/ }),
+
+/***/ "./components/Header/index.scss":
+/*!**************************************!*\
+  !*** ./components/Header/index.scss ***!
+  \**************************************/
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin;
+    if (true) {
+      var injectCss = function injectCss(prev, href) {
+        var link = prev.cloneNode();
+        link.href = href;
+        link.onload = function() {
+          prev.parentNode.removeChild(prev);
+        };
+        prev.stale = true;
+        prev.parentNode.insertBefore(link, prev);
+      };
+      module.hot.dispose(function() {
+        window.__webpack_reload_css__ = true;
+      });
+      if (window.__webpack_reload_css__) {
+        module.hot.__webpack_reload_css__ = false;
+        console.log("[HMR] Reloading stylesheets...");
+        var prefix = document.location.protocol + '//' + document.location.host;
+        document
+          .querySelectorAll("link[href][rel=stylesheet]")
+          .forEach(function(link) {
+            if (!link.href.match(prefix) || link.stale) return;
+<<<<<<< HEAD
             injectCss(link, link.href.split("?")[0] + "?unix=1563669858055");
+=======
+            injectCss(link, link.href.split("?")[0] + "?unix=1563511541249");
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3
           });
       }
     }
@@ -66,7 +110,11 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
+<<<<<<< HEAD
             injectCss(link, link.href.split("?")[0] + "?unix=1563669857876");
+=======
+            injectCss(link, link.href.split("?")[0] + "?unix=1563511541149");
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3
           });
       }
     }
@@ -103,7 +151,11 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
+<<<<<<< HEAD
             injectCss(link, link.href.split("?")[0] + "?unix=1563671117843");
+=======
+            injectCss(link, link.href.split("?")[0] + "?unix=1563511541167");
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3
           });
       }
     }
@@ -140,7 +192,11 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
+<<<<<<< HEAD
             injectCss(link, link.href.split("?")[0] + "?unix=1563674808930");
+=======
+            injectCss(link, link.href.split("?")[0] + "?unix=1563511541136");
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3
           });
       }
     }
@@ -177,7 +233,11 @@
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
+<<<<<<< HEAD
             injectCss(link, link.href.split("?")[0] + "?unix=1563669857291");
+=======
+            injectCss(link, link.href.split("?")[0] + "?unix=1563511543768");
+>>>>>>> e91eb49312677be8e75727ba68b15e83b73d8ad3
           });
       }
     }

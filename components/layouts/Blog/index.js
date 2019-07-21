@@ -7,6 +7,7 @@ import "./index.scss";
 const Layout = ({title, children}) => {
   const router = useRouter();
   const {publishedAt, readTime} = posts.find(post => post.title === title);
+
   return (
     <div className="blog-page">
       <Head title={title} />
