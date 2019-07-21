@@ -35,6 +35,7 @@ const Projects = () => {
             animationDelay={`.${index * 2}s`}
             onTagClick={addTag}
             key={project.title}
+            selectedTags={searchTags}
             {...project}
           />
         ))}

@@ -7,7 +7,8 @@ const ProjectBanner = ({
   tags,
   image,
   onTagClick,
-  animationDelay
+  animationDelay,
+  selectedTags
 }) => (
   <div className="project-banner" style={{animationDelay: animationDelay}}>
     <img src={image} alt={`${title} image`} />
@@ -20,7 +21,10 @@ const ProjectBanner = ({
     </div>
     <div className="tags">
       {tags.map(tag => (
-        <span onClick={() => onTagClick(tag)} key={tag}>
+        <span
+          onClick={() => onTagClick(tag)}
+          key={tag}
+          className={selectedTags.includes(tag) ? "selected" : ""}>
           {tag}
         </span>
       ))}

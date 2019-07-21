@@ -43,7 +43,8 @@
       opacity: 0.5;
 
       transition: 0.25s;
-      &:hover {
+      &:hover,
+      &.selected {
         opacity: 1;
         cursor: pointer;
       }

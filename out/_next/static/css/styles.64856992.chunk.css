@@ -342,7 +342,7 @@ footer {
       margin: 5px;
       opacity: 0.5;
       transition: 0.25s; }
-      .project-banner .tags > span:hover {
+      .project-banner .tags > span:hover, .project-banner .tags > span.selected {
         opacity: 1;
         cursor: pointer; }
 
