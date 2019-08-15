@@ -9,9 +9,29 @@ export default ({title}) => {
     return !formattedTitle.length ? "Home" : formattedTitle;
   };
 
+  const getScript = () => ({
+    __html: `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-128564416-2');
+    `
+  })
+
   return (
     <Head>
       <title>Kipperman | {getTitle()}</title>
+      <link rel="icon" href="/static/favicon.ico"></link>
+      {process.env.NODE_ENV !== 'development' &&
+        <Fragment>
+          <script 
+            async 
+            src="https://www.googletagmanager.com/gtag/js?id=UA-128564416-2"
+          />
+          <script dangerouslySetInnerHTML={getScript()} />
+        </Fragment>
+      }
     </Head>
   );
 };

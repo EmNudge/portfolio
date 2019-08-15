@@ -153,6 +153,14 @@
     .dummy-container {
       display: flex;
       justify-content: center;
+    }
+    ul {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      li {
+        padding: 20px;
+      }
       // grid-template-columns: 1fr auto 1fr;
     }
   }
