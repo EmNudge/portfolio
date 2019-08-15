@@ -22,7 +22,7 @@ export default ({title}) => {
   return (
     <Head>
       <title>Kipperman | {getTitle()}</title>
-      <link rel="icon" href="/static/icon.ico"></link>
+      <link rel="icon" href="/static/favicon.ico"></link>
       {process.env.NODE_ENV !== 'development' &&
         <React.Fragment>
           <script 

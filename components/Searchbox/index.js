@@ -49,7 +49,6 @@ const Searchbox = ({tags, addedTags, onChange}) => {
   };
 
   React.useEffect(() => {
-    console.log(searchContainer);
     document.addEventListener("mousedown", pressOutside, false);
     document.addEventListener("touchstart", pressOutside, false);
     return () => {
