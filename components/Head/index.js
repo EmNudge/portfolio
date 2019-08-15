@@ -17,20 +17,20 @@ export default ({title}) => {
 
       gtag('config', 'UA-128564416-2');
     `
-  })
+  });
 
   return (
     <Head>
       <title>Kipperman | {getTitle()}</title>
-      <link rel="icon" href="/static/favicon.ico"></link>
+      <link rel="icon" href="/static/icon.ico"></link>
       {process.env.NODE_ENV !== 'development' &&
-        <Fragment>
+        <React.Fragment>
           <script 
             async 
             src="https://www.googletagmanager.com/gtag/js?id=UA-128564416-2"
           />
           <script dangerouslySetInnerHTML={getScript()} />
-        </Fragment>
+        </React.Fragment>
       }
     </Head>
   );

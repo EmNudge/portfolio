@@ -100,10 +100,22 @@ body {
     text-align: center; }
     .page .title h1 {
       font-weight: 300;
-      font-size: 3.5em; }
+      font-size: 3.5em;
+      animation: fade-down 0.5s; }
     .page .title h3 {
       font-weight: 100;
-      font-size: 2em; }
+      font-size: 2em;
+      opacity: 0;
+      animation: fade-down 0.5s forwards;
+      animation-delay: 0.1s; }
+
+@keyframes fade-down {
+  from {
+    opacity: 0;
+    transform: translate(0px, -10px); }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px); } }
   .page main {
     max-width: 900px;
     margin: 0 auto; }
@@ -128,6 +140,27 @@ footer a {
     height: 0.4em;
     z-index: -1;
     background: var(--highlight); }
+
+.post {
+  margin: 0 auto; }
+  .post > * {
+    margin: 0 20px; }
+  .post .meta {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px; }
+    .post .meta .break {
+      margin: 0 10px; }
+  .post h2 {
+    font-size: 2.5em;
+    font-weight: 400;
+    margin-bottom: 10px; }
+  .post h3 {
+    font-weight: 300; }
+
+@media screen and (max-width: 700px) {
+  .post h2 {
+    font-size: 8vw; } }
 
 .search-container {
   margin: 0 auto;

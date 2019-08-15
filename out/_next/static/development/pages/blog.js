@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\projects.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static\\development\\pages\\blog.js"],{
 
 /***/ "./components/Head/index.js":
 /*!**********************************!*\
@@ -291,10 +291,10 @@ var Header = function Header(_ref) {
 
 /***/ }),
 
-/***/ "./components/ProjectBanner/index.js":
-/*!*******************************************!*\
-  !*** ./components/ProjectBanner/index.js ***!
-  \*******************************************/
+/***/ "./components/PostStub/index.js":
+/*!**************************************!*\
+  !*** ./components/PostStub/index.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -302,302 +302,65 @@ var Header = function Header(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./components/ProjectBanner/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\ProjectBanner\\index.js";
+/* harmony import */ var next_Link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/Link */ "./node_modules/next/Link.js");
+/* harmony import */ var next_Link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_Link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.scss */ "./components/PostStub/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\PostStub\\index.js";
 
 
 
-var ProjectBanner = function ProjectBanner(_ref) {
-  var title = _ref.title,
-      url = _ref.url,
-      description = _ref.description,
-      tags = _ref.tags,
-      image = _ref.image,
-      onTagClick = _ref.onTagClick,
-      animationDelay = _ref.animationDelay,
-      selectedTags = _ref.selectedTags;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "project-banner",
-    style: {
-      animationDelay: animationDelay
+
+var PostStub = function PostStub(_ref) {
+  var path = _ref.path,
+      publishedAt = _ref.publishedAt,
+      title = _ref.title,
+      summary = _ref.summary,
+      readTime = _ref.readTime;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_Link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: path,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 5
     },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "post",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "meta",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, publishedAt, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "break",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "\u25CF"), readTime, " min read"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: image,
-    alt: "".concat(title, " image"),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "main",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "normal",
-    href: url,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, url), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "tags",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, tags.map(function (tag) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      onClick: function onClick() {
-        return onTagClick(tag);
-      },
-      key: tag,
-      className: selectedTags.includes(tag) ? "selected" : "",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24
-      },
-      __self: this
-    }, tag);
-  })));
+  }, summary)));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (ProjectBanner);
-
-/***/ }),
-
-/***/ "./components/Searchbox/index.js":
-/*!***************************************!*\
-  !*** ./components/Searchbox/index.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.scss */ "./components/Searchbox/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_3__);
-
-
-var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\components\\Searchbox\\index.js";
-
-
-
-var Searchbox = function Searchbox(_ref) {
-  var tags = _ref.tags,
-      addedTags = _ref.addedTags,
-      onChange = _ref.onChange;
-
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(""),
-      _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState, 2),
-      search = _React$useState2[0],
-      setSearch = _React$useState2[1];
-
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(false),
-      _React$useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState3, 2),
-      isFocused = _React$useState4[0],
-      setIsFocues = _React$useState4[1];
-
-  var searchContainer = react__WEBPACK_IMPORTED_MODULE_2___default.a.useRef();
-
-  var getTags = function getTags() {
-    return tags.filter(function (tag) {
-      return tag.toUpperCase().includes(search.toUpperCase()) && !addedTags.includes(tag);
-    });
-  };
-
-  var getAddedTags = function getAddedTags() {
-    var width = searchContainer.current ? searchContainer.current.clientWidth : 600;
-    return addedTags.slice(0, width > 550 ? 3 : 2);
-  };
-
-  var getLeftoverTagNum = function getLeftoverTagNum() {
-    var num = addedTags.length - getAddedTags().length;
-    if (num === 0) return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 23
-      },
-      __self: this
-    });
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      className: "leftovers",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    }, num);
-  };
-
-  var addTag = function addTag(tag) {
-    onChange([tag].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(addedTags)));
-    setSearch("");
-  };
-
-  var removeTag = function removeTag(tag) {
-    onChange(addedTags.filter(function (addedTag) {
-      return addedTag !== tag;
-    }));
-  };
-
-  var handleKeyDown = function handleKeyDown(e) {
-    if (e.key === "Enter" && getTags()[0]) {
-      addTag(getTags()[0]);
-    } else if (e.key === "Backspace" && !search) {
-      removeTag(addedTags[addedTags.length - 1]);
-    }
-  };
-
-  var pressOutside = function pressOutside(e) {
-    if (!searchContainer.current) return;
-    if (searchContainer.current.contains(e.target)) return;
-    setIsFocues(false);
-  };
-
-  react__WEBPACK_IMPORTED_MODULE_2___default.a.useEffect(function () {
-    console.log(searchContainer);
-    document.addEventListener("mousedown", pressOutside, false);
-    document.addEventListener("touchstart", pressOutside, false);
-    return function () {
-      document.removeEventListener("mousedown", pressOutside, false);
-      document.removeEventListener("touchstart", pressOutside, false);
-    };
-  }, []);
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "search-container",
-    ref: searchContainer,
-    onClick: function onClick() {
-      return setIsFocues(true);
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 62
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
-    htmlFor: "search-box",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: this
-  }, "Search"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "input-row",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
-    id: "search-box",
-    type: "text",
-    placeholder: "Start typing...",
-    value: search,
-    onChange: function onChange(e) {
-      return setSearch(e.target.value);
-    },
-    onFocus: function onFocus() {
-      return setIsFocues(true);
-    },
-    onBlur: function onBlur() {
-      return setIsFocues(false);
-    },
-    onKeyDown: handleKeyDown,
-    autoComplete: "off",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 68
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "added-tags",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79
-    },
-    __self: this
-  }, getAddedTags().map(function (tag) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      key: tag,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 81
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 82
-      },
-      __self: this
-    }, tag), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      className: "remove-btn",
-      onClick: function onClick() {
-        return removeTag(tag);
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 83
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 84
-      },
-      __self: this
-    }, "x")));
-  }), getLeftoverTagNum())), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "tags-container" + (isFocused ? " open" : ""),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: this
-  }, getTags().map(function (tag) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-      onClick: function onClick() {
-        return addTag(tag);
-      },
-      key: tag,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 93
-      },
-      __self: this
-    }, tag);
-  })));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Searchbox);
+/* harmony default export */ __webpack_exports__["default"] = (PostStub);
 
 /***/ }),
 
@@ -7090,21 +6853,21 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cprojects.js!./":
-/*!***************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cprojects.js ***!
-  \***************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cblog.js!./":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cblog.js ***!
+  \*******************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/projects", function() {
-      var page = __webpack_require__(/*! ./pages/projects.js */ "./pages/projects.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/blog", function() {
+      var page = __webpack_require__(/*! ./pages/blog.js */ "./pages/blog.js")
       if(true) {
-        module.hot.accept(/*! ./pages/projects.js */ "./pages/projects.js", function() {
-          if(!next.router.components["/projects"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/projects.js */ "./pages/projects.js")
-          next.router.update("/projects", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/blog.js */ "./pages/blog.js", function() {
+          if(!next.router.components["/blog"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/blog.js */ "./pages/blog.js")
+          next.router.update("/blog", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -11388,173 +11151,74 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/projects.js":
-/*!***************************!*\
-  !*** ./pages/projects.js ***!
-  \***************************/
+/***/ "./pages/blog.js":
+/*!***********************!*\
+  !*** ./pages/blog.js ***!
+  \***********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_layouts_Main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/layouts/Main */ "./components/layouts/Main/index.js");
-/* harmony import */ var _components_Searchbox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Searchbox */ "./components/Searchbox/index.js");
-/* harmony import */ var _projects_index__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../projects/index */ "./projects/index.js");
-/* harmony import */ var _projects_index__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_projects_index__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_ProjectBanner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ProjectBanner */ "./components/ProjectBanner/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_layouts_Main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layouts/Main */ "./components/layouts/Main/index.js");
+/* harmony import */ var _posts_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../posts/index */ "./posts/index.js");
+/* harmony import */ var _posts_index__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_posts_index__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_PostStub__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/PostStub */ "./components/PostStub/index.js");
 
-
-
-var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\pages\\projects.js";
+var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\\pages\\blog.js";
 
 
 
 
 
-
-var Projects = function Projects() {
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_3___default.a.useState([]),
-      _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_React$useState, 2),
-      searchTags = _React$useState2[0],
-      setSearchTags = _React$useState2[1];
-
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_3___default.a.useState(1),
-      _React$useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_React$useState3, 2),
-      rerenderForcer = _React$useState4[0],
-      setRerenderForcer = _React$useState4[1];
-
-  var addTag = function addTag(tag) {
-    if (searchTags.includes(tag)) return;
-    setSearchTags([].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(searchTags), [tag]));
-  };
-
-  var getFilteredProjects = function getFilteredProjects() {
-    if (!searchTags.length) return _projects_index__WEBPACK_IMPORTED_MODULE_6__["projects"];
-    return _projects_index__WEBPACK_IMPORTED_MODULE_6__["projects"].filter(function (project) {
-      return searchTags.every(function (tag) {
-        return project.tags.includes(tag);
-      });
-    });
-  };
-
-  var handleChange = function handleChange(tag) {
-    setRerenderForcer(rerenderForcer * -1);
-    setSearchTags(tag);
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_layouts_Main__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    title: "Projects",
+var Blog = function Blog() {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layouts_Main__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: "Blog",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 6
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_Searchbox__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    tags: _projects_index__WEBPACK_IMPORTED_MODULE_6__["tags"],
-    addedTags: searchTags,
-    onChange: handleChange,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "projects-container",
-    key: rerenderForcer,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, getFilteredProjects().map(function (project, index) {
-    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_ProjectBanner__WEBPACK_IMPORTED_MODULE_7__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-      animationDelay: ".".concat(index * 2, "s"),
-      onTagClick: addTag,
-      key: project.title,
-      selectedTags: searchTags
-    }, project, {
+  }, _posts_index__WEBPACK_IMPORTED_MODULE_3___default.a.map(function (post) {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_PostStub__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      key: post.title
+    }, post, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 7
       },
       __self: this
     }));
-  })));
+  }));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Projects);
+/* harmony default export */ __webpack_exports__["default"] = (Blog);
 
 /***/ }),
 
-/***/ "./projects/index.js":
-/*!***************************!*\
-  !*** ./projects/index.js ***!
-  \***************************/
+/***/ "./posts/index.js":
+/*!************************!*\
+  !*** ./posts/index.js ***!
+  \************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var projects = [{
-  "image": "/static/projects/emnudge.png",
-  "isReady": true,
-  "title": "Voice Over",
-  "url": "https://emnudge.com",
-  "description": "Voice acting and voice over portfolio",
-  "tags": ["React.js", "Gatsby.js", "Scss"],
-  "index": 0
-}, {
-  "image": "/static/projects/kaff.png",
-  "isReady": true,
-  "title": "KAFF",
-  "url": "https://kaffsoftware.com",
-  "description": "Games company website made with Vue.js and firebase",
-  "tags": ["Vue.js", "Firebase", "Particles.js", "anime.js", "Scss"],
-  "index": 1
-}, {
-  "image": "/static/projects/styledlogs.png",
-  "isReady": true,
-  "title": "Keyframed Audioplayer",
-  "url": "http://keyframed-audioplayer.netlify.com",
-  "description": "Web component audioplayer with keyframeable attributes",
-  "tags": ["Stencil.js", "Typescript"],
-  "index": 2
-}, {
-  "image": "/static/projects/kipperman.png",
-  "isReady": true,
-  "title": "Portfolio",
-  "url": "https://kipperman.co",
-  "description": "Web development portfolio",
-  "tags": ["React.js", "Next.js", "Scss", "MDX", "human-date"],
-  "index": 3
-}, {
-  "image": "/static/projects/pushover.png",
-  "isReady": true,
-  "title": "Pushover",
-  "url": "https://github.com/EmNudge/pushover",
-  "description": "Discord bot built for team management",
-  "tags": ["Discord.js", "Firebase", "Mongo DB", "Node.js", "node-cron"],
-  "index": 4
-}, {
-  "image": "/static/projects/styledlogs.png",
-  "isReady": true,
-  "title": "Styled Logs",
-  "url": "https://github.com/EmNudge/Styled-Logs",
-  "description": "Console log library for styling console logs",
-  "tags": ["Vanilla.js"],
-  "index": 5
+var posts = [{
+  "published": true,
+  "publishedAt": "July 21st, 2019",
+  "title": "To Be Or To Ben't - The Nonsense of Words",
+  "summary": "A wannabe linguist's take on words",
+  "path": "/blog/to-be-or-to-bent",
+  "index": 0,
+  "readTime": 6
 }];
-var tags = ["React.js", "Gatsby.js", "Scss", "Vue.js", "Firebase", "Particles.js", "anime.js", "Stencil.js", "Typescript", "Next.js", "MDX", "human-date", "Discord.js", "Mongo DB", "Node.js", "node-cron", "Vanilla.js"];
-module.exports = {
-  projects: projects,
-  tags: tags
-};
+module.exports = posts;
 
 /***/ }),
 
@@ -11602,14 +11266,14 @@ var SvgLogo = function SvgLogo(props) {
 
 /***/ }),
 
-/***/ 7:
-/*!*******************************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cprojects.js ***!
-  \*******************************************************************************************************************************************************************/
+/***/ 0:
+/*!***********************************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Fblog&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cblog.js ***!
+  \***********************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cprojects.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cprojects.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fblog&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cblog.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fblog&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cblog.js!./");
 
 
 /***/ }),
@@ -11625,5 +11289,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[7,"static/runtime/webpack.js","styles"]]]);
-//# sourceMappingURL=projects.js.map
+},[[0,"static/runtime/webpack.js","styles"]]]);
+//# sourceMappingURL=blog.js.map
