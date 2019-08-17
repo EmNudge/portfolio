@@ -46,7 +46,7 @@ const Header = ({currentRoute}) => {
   return (
     <header className="main-header">
       <Link href="/">
-        <a className="logo">
+        <a className="logo" aria-label="SVG Website Logo">
           <Logo />
         </a>
       </Link>
