@@ -1,5 +1,5 @@
 export const meta = {
-  image: "stylelogs.png",
+  image: "styledlogs.png",
   isReady: true,
   title: "Minimal Templating Lang",
   url: "https://github.com/EmNudge/Minimal-Templating-Lang",
