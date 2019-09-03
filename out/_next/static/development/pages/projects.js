@@ -53,28 +53,7 @@ var _jsxFileName = "C:\\Users\\EmNudge\\Workspace\\kipperman portfolio\\next-js\
       lineNumber: 25
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
-    async: true,
-    src: "https://www.googletagmanager.com/gtag/js?id=UA-128564416-2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
-    dangerouslySetInnerHTML: getScript(),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  })));
+  }),  false && false);
 });
 
 /***/ }),
@@ -483,7 +462,6 @@ var Searchbox = function Searchbox(_ref) {
   };
 
   react__WEBPACK_IMPORTED_MODULE_2___default.a.useEffect(function () {
-    console.log(searchContainer);
     document.addEventListener("mousedown", pressOutside, false);
     document.addEventListener("touchstart", pressOutside, false);
     return function () {
@@ -499,21 +477,21 @@ var Searchbox = function Searchbox(_ref) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 61
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
     htmlFor: "search-box",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 65
     },
     __self: this
   }, "Search"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "input-row",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 66
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
@@ -534,14 +512,14 @@ var Searchbox = function Searchbox(_ref) {
     autoComplete: "off",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 67
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
     className: "added-tags",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 78
     },
     __self: this
   }, getAddedTags().map(function (tag) {
@@ -549,13 +527,13 @@ var Searchbox = function Searchbox(_ref) {
       key: tag,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 81
+        lineNumber: 80
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 82
+        lineNumber: 81
       },
       __self: this
     }, tag), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
@@ -565,13 +543,13 @@ var Searchbox = function Searchbox(_ref) {
       },
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 83
+        lineNumber: 82
       },
       __self: this
     }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 84
+        lineNumber: 83
       },
       __self: this
     }, "x")));
@@ -579,7 +557,7 @@ var Searchbox = function Searchbox(_ref) {
     className: "tags-container" + (isFocused ? " open" : ""),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 91
+      lineNumber: 90
     },
     __self: this
   }, getTags().map(function (tag) {
@@ -590,7 +568,7 @@ var Searchbox = function Searchbox(_ref) {
       key: tag,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 93
+        lineNumber: 92
       },
       __self: this
     }, tag);
@@ -11534,13 +11512,21 @@ var projects = [{
   "tags": ["React.js", "Next.js", "Scss", "MDX", "human-date"],
   "index": 3
 }, {
+  "image": "/static/projects/stylelogs.png",
+  "isReady": true,
+  "title": "Minimal Templating Lang",
+  "url": "https://github.com/EmNudge/Minimal-Templating-Lang",
+  "description": "An extremely minimal zero-dependency templating language built with node",
+  "tags": ["Node.js"],
+  "index": 4
+}, {
   "image": "/static/projects/pushover.png",
   "isReady": true,
   "title": "Pushover",
   "url": "https://github.com/EmNudge/pushover",
   "description": "Discord bot built for team management",
-  "tags": ["Discord.js", "Firebase", "Mongo DB", "Node.js", "node-cron"],
-  "index": 4
+  "tags": ["Discord.js", "Firebase", "Typescript", "Mongo DB", "Node.js", "node-cron"],
+  "index": 5
 }, {
   "image": "/static/projects/styledlogs.png",
   "isReady": true,
@@ -11548,9 +11534,9 @@ var projects = [{
   "url": "https://github.com/EmNudge/Styled-Logs",
   "description": "Console log library for styling console logs",
   "tags": ["Vanilla.js"],
-  "index": 5
+  "index": 6
 }];
-var tags = ["React.js", "Gatsby.js", "Scss", "Vue.js", "Firebase", "Particles.js", "anime.js", "Stencil.js", "Typescript", "Next.js", "MDX", "human-date", "Discord.js", "Mongo DB", "Node.js", "node-cron", "Vanilla.js"];
+var tags = ["React.js", "Gatsby.js", "Scss", "Vue.js", "Firebase", "Particles.js", "anime.js", "Stencil.js", "Typescript", "Next.js", "MDX", "human-date", "Node.js", "Discord.js", "Mongo DB", "node-cron", "Vanilla.js"];
 module.exports = {
   projects: projects,
   tags: tags
@@ -11602,7 +11588,7 @@ var SvgLogo = function SvgLogo(props) {
 
 /***/ }),
 
-/***/ 7:
+/***/ 0:
 /*!*******************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=C%3A%5CUsers%5CEmNudge%5CWorkspace%5Ckipperman%20portfolio%5Cnext-js%5Cpages%5Cprojects.js ***!
   \*******************************************************************************************************************************************************************/
@@ -11625,5 +11611,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[7,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=projects.js.map
