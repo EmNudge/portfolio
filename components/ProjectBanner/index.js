@@ -5,13 +5,13 @@ const ProjectBanner = ({
   url,
   description,
   tags,
-  image,
   onTagClick,
   animationDelay,
-  selectedTags
+  selectedTags,
+  background
 }) => (
-  <div className="project-banner" style={{animationDelay: animationDelay}}>
-    <img src={image} alt={`${title} image`} />
+  <div className="project-banner" style={{animationDelay}}>
+    <div className="bg-card" style={{background}} />
     <div className="main">
       <h1>{title}</h1>
       <a className="normal" href={url}>

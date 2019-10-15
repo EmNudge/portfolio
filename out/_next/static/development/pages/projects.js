@@ -279,10 +279,10 @@ var ProjectBanner = function ProjectBanner(_ref) {
       url = _ref.url,
       description = _ref.description,
       tags = _ref.tags,
-      image = _ref.image,
       onTagClick = _ref.onTagClick,
       animationDelay = _ref.animationDelay,
-      selectedTags = _ref.selectedTags;
+      selectedTags = _ref.selectedTags,
+      background = _ref.background;
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "project-banner",
     style: {
@@ -293,9 +293,11 @@ var ProjectBanner = function ProjectBanner(_ref) {
       lineNumber: 13
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: image,
-    alt: "".concat(title, " image"),
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "bg-card",
+    style: {
+      background: background
+    },
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -11467,52 +11469,52 @@ var Projects = function Projects() {
 
 
 var projects = [{
-  "image": "/static/projects/emnudge.png",
   "isReady": true,
   "title": "Voice Over",
   "url": "https://emnudge.com",
   "description": "Voice acting and voice over portfolio",
   "tags": ["React.js", "Gatsby.js", "Scss"],
+  "background": "linear-gradient(\n      1deg,\n      rgba(288, 288, 288, 0.05) 0%, \n      rgba(288, 288, 288, 0.05) 33%, \n      rgba(94, 94, 94, 0.05) 33%, \n      rgba(94, 94, 94, 0.05) 66%, \n      rgba(176, 176, 176, 0.05) 66%, \n      rgba(176, 176, 176, 0.05) 100%\n    ),linear-gradient(\n      275deg,\n      rgba(62, 62, 62, 0.01) 0%, \n      rgba(62, 62, 62, 0.01) 33%, \n      rgba(272, 272, 272, 0.01) 33%, \n      rgba(272, 272, 272, 0.01) 66%, \n      rgba(303, 303, 303, 0.01) 66%, \n      rgba(303, 303, 303, 0.01) 100%\n    ),linear-gradient(\n      225deg,\n      rgba(340, 340, 340, 0) 0%, \n      rgba(340, 340, 340, 0) 33%, \n      rgba(139, 139, 139, 0) 33%, \n      rgba(139, 139, 139, 0) 66%, \n      rgba(352, 352, 352, 0) 66%, \n      rgba(352, 352, 352, 0) 100%\n    ),linear-gradient(\n      311deg,\n      rgba(154, 154, 154, 0.06) 0%, \n      rgba(154, 154, 154, 0.06) 33%, \n      rgba(70, 70, 70, 0.06) 33%, \n      rgba(70, 70, 70, 0.06) 66%, \n      rgba(96, 96, 96, 0.06) 66%, \n      rgba(96, 96, 96, 0.06) 100%\n    ),linear-gradient(\n      243deg,\n      rgba(179, 179, 179, 0.03) 0%, \n      rgba(179, 179, 179, 0.03) 33%, \n      rgba(72, 72, 72, 0.03) 33%, \n      rgba(72, 72, 72, 0.03) 66%, \n      rgba(344, 344, 344, 0.03) 66%, \n      rgba(344, 344, 344, 0.03) 100%\n    ),linear-gradient(\n      77deg,\n      rgba(270, 270, 270, 0.09) 0%, \n      rgba(270, 270, 270, 0.09) 33%, \n      rgba(357, 357, 357, 0.09) 33%, \n      rgba(357, 357, 357, 0.09) 66%, \n      rgba(110, 110, 110, 0.09) 66%, \n      rgba(110, 110, 110, 0.09) 100%\n    ),linear-gradient(\n      91deg,\n      rgba(89, 89, 89, 0.06) 0%, \n      rgba(89, 89, 89, 0.06) 33%, \n      rgba(248, 248, 248, 0.06) 33%, \n      rgba(248, 248, 248, 0.06) 66%, \n      rgba(124, 124, 124, 0.06) 66%, \n      rgba(124, 124, 124, 0.06) 100%\n    ),linear-gradient(\n      355deg,\n      rgba(17, 17, 17, 0.04) 0%, \n      rgba(17, 17, 17, 0.04) 33%, \n      rgba(157, 157, 157, 0.04) 33%, \n      rgba(157, 157, 157, 0.04) 66%, \n      rgba(143, 143, 143, 0.04) 66%, \n      rgba(143, 143, 143, 0.04) 100%\n    ),\n  linear-gradient(\n    315deg, \n    hsl(592, 77%, 52%),\n    hsl(546, 91%, 49%)\n  )",
   "index": 0
 }, {
-  "image": "/static/projects/kaff.png",
   "isReady": true,
   "title": "KAFF",
   "url": "https://kaffsoftware.com",
   "description": "Games company website made with Vue.js and firebase",
   "tags": ["Vue.js", "Firebase", "Particles.js", "anime.js", "Scss"],
+  "background": "linear-gradient(\n      7deg,\n      rgba(239, 239, 239, 0.02) 0%, \n      rgba(239, 239, 239, 0.02) 33%, \n      rgba(76, 76, 76, 0.02) 33%, \n      rgba(76, 76, 76, 0.02) 66%, \n      rgba(54, 54, 54, 0.02) 66%, \n      rgba(54, 54, 54, 0.02) 100%\n    ),linear-gradient(\n      221deg,\n      rgba(58, 58, 58, 0.03) 0%, \n      rgba(58, 58, 58, 0.03) 33%, \n      rgba(34, 34, 34, 0.03) 33%, \n      rgba(34, 34, 34, 0.03) 66%, \n      rgba(200, 200, 200, 0.03) 66%, \n      rgba(200, 200, 200, 0.03) 100%\n    ),linear-gradient(\n      254deg,\n      rgba(277, 277, 277, 0.05) 0%, \n      rgba(277, 277, 277, 0.05) 33%, \n      rgba(299, 299, 299, 0.05) 33%, \n      rgba(299, 299, 299, 0.05) 66%, \n      rgba(182, 182, 182, 0.05) 66%, \n      rgba(182, 182, 182, 0.05) 100%\n    ),linear-gradient(\n      31deg,\n      rgba(99, 99, 99, 0.08) 0%, \n      rgba(99, 99, 99, 0.08) 33%, \n      rgba(90, 90, 90, 0.08) 33%, \n      rgba(90, 90, 90, 0.08) 66%, \n      rgba(206, 206, 206, 0.08) 66%, \n      rgba(206, 206, 206, 0.08) 100%\n    ),linear-gradient(\n      263deg,\n      rgba(230, 230, 230, 0.08) 0%, \n      rgba(230, 230, 230, 0.08) 33%, \n      rgba(165, 165, 165, 0.08) 33%, \n      rgba(165, 165, 165, 0.08) 66%, \n      rgba(242, 242, 242, 0.08) 66%, \n      rgba(242, 242, 242, 0.08) 100%\n    ),linear-gradient(\n      5deg,\n      rgba(40, 40, 40, 0.05) 0%, \n      rgba(40, 40, 40, 0.05) 33%, \n      rgba(224, 224, 224, 0.05) 33%, \n      rgba(224, 224, 224, 0.05) 66%, \n      rgba(17, 17, 17, 0.05) 66%, \n      rgba(17, 17, 17, 0.05) 100%\n    ),linear-gradient(\n      229deg,\n      rgba(32, 32, 32, 0.09) 0%, \n      rgba(32, 32, 32, 0.09) 33%, \n      rgba(21, 21, 21, 0.09) 33%, \n      rgba(21, 21, 21, 0.09) 66%, \n      rgba(96, 96, 96, 0.09) 66%, \n      rgba(96, 96, 96, 0.09) 100%\n    ),linear-gradient(\n      125deg,\n      rgba(346, 346, 346, 0.09) 0%, \n      rgba(346, 346, 346, 0.09) 33%, \n      rgba(213, 213, 213, 0.09) 33%, \n      rgba(213, 213, 213, 0.09) 66%, \n      rgba(308, 308, 308, 0.09) 66%, \n      rgba(308, 308, 308, 0.09) 100%\n    ),\n  linear-gradient(\n    187deg, \n    hsl(424, 77%, 52%),\n    hsl(378, 91%, 49%)\n  )",
   "index": 1
 }, {
-  "image": "/static/projects/styledlogs.png",
   "isReady": true,
   "title": "Keyframed Audioplayer",
   "url": "http://keyframed-audioplayer.netlify.com",
   "description": "Web component audioplayer with keyframeable attributes",
   "tags": ["Stencil.js", "Typescript"],
+  "background": "linear-gradient(\n      74deg,\n      rgba(103, 103, 103, 0.05) 0%, \n      rgba(103, 103, 103, 0.05) 33%, \n      rgba(342, 342, 342, 0.05) 33%, \n      rgba(342, 342, 342, 0.05) 66%, \n      rgba(125, 125, 125, 0.05) 66%, \n      rgba(125, 125, 125, 0.05) 100%\n    ),linear-gradient(\n      214deg,\n      rgba(69, 69, 69, 0.08) 0%, \n      rgba(69, 69, 69, 0.08) 33%, \n      rgba(345, 345, 345, 0.08) 33%, \n      rgba(345, 345, 345, 0.08) 66%, \n      rgba(65, 65, 65, 0.08) 66%, \n      rgba(65, 65, 65, 0.08) 100%\n    ),linear-gradient(\n      273deg,\n      rgba(233, 233, 233, 0) 0%, \n      rgba(233, 233, 233, 0) 33%, \n      rgba(152, 152, 152, 0) 33%, \n      rgba(152, 152, 152, 0) 66%, \n      rgba(95, 95, 95, 0) 66%, \n      rgba(95, 95, 95, 0) 100%\n    ),linear-gradient(\n      239deg,\n      rgba(29, 29, 29, 0.01) 0%, \n      rgba(29, 29, 29, 0.01) 33%, \n      rgba(348, 348, 348, 0.01) 33%, \n      rgba(348, 348, 348, 0.01) 66%, \n      rgba(203, 203, 203, 0.01) 66%, \n      rgba(203, 203, 203, 0.01) 100%\n    ),linear-gradient(\n      50deg,\n      rgba(128, 128, 128, 0.07) 0%, \n      rgba(128, 128, 128, 0.07) 33%, \n      rgba(117, 117, 117, 0.07) 33%, \n      rgba(117, 117, 117, 0.07) 66%, \n      rgba(282, 282, 282, 0.07) 66%, \n      rgba(282, 282, 282, 0.07) 100%\n    ),linear-gradient(\n      290deg,\n      rgba(124, 124, 124, 0.08) 0%, \n      rgba(124, 124, 124, 0.08) 33%, \n      rgba(237, 237, 237, 0.08) 33%, \n      rgba(237, 237, 237, 0.08) 66%, \n      rgba(69, 69, 69, 0.08) 66%, \n      rgba(69, 69, 69, 0.08) 100%\n    ),linear-gradient(\n      331deg,\n      rgba(91, 91, 91, 0.08) 0%, \n      rgba(91, 91, 91, 0.08) 33%, \n      rgba(82, 82, 82, 0.08) 33%, \n      rgba(82, 82, 82, 0.08) 66%, \n      rgba(119, 119, 119, 0.08) 66%, \n      rgba(119, 119, 119, 0.08) 100%\n    ),linear-gradient(\n      273deg,\n      rgba(72, 72, 72, 0) 0%, \n      rgba(72, 72, 72, 0) 33%, \n      rgba(35, 35, 35, 0) 33%, \n      rgba(35, 35, 35, 0) 66%, \n      rgba(191, 191, 191, 0) 66%, \n      rgba(191, 191, 191, 0) 100%\n    ),\n  linear-gradient(\n    27deg, \n    hsl(279, 77%, 52%),\n    hsl(233, 91%, 49%)\n  )",
   "index": 2
 }, {
-  "image": "/static/projects/kipperman.png",
   "isReady": true,
   "title": "Portfolio",
   "url": "https://kipperman.co",
   "description": "Web development portfolio",
   "tags": ["React.js", "Next.js", "Scss", "MDX", "human-date"],
+  "background": "linear-gradient(\n      7deg,\n      rgba(264, 264, 264, 0.04) 0%, \n      rgba(264, 264, 264, 0.04) 33%, \n      rgba(23, 23, 23, 0.04) 33%, \n      rgba(23, 23, 23, 0.04) 66%, \n      rgba(235, 235, 235, 0.04) 66%, \n      rgba(235, 235, 235, 0.04) 100%\n    ),linear-gradient(\n      43deg,\n      rgba(44, 44, 44, 0.07) 0%, \n      rgba(44, 44, 44, 0.07) 33%, \n      rgba(335, 335, 335, 0.07) 33%, \n      rgba(335, 335, 335, 0.07) 66%, \n      rgba(63, 63, 63, 0.07) 66%, \n      rgba(63, 63, 63, 0.07) 100%\n    ),linear-gradient(\n      127deg,\n      rgba(300, 300, 300, 0.03) 0%, \n      rgba(300, 300, 300, 0.03) 33%, \n      rgba(34, 34, 34, 0.03) 33%, \n      rgba(34, 34, 34, 0.03) 66%, \n      rgba(336, 336, 336, 0.03) 66%, \n      rgba(336, 336, 336, 0.03) 100%\n    ),linear-gradient(\n      169deg,\n      rgba(169, 169, 169, 0.08) 0%, \n      rgba(169, 169, 169, 0.08) 33%, \n      rgba(274, 274, 274, 0.08) 33%, \n      rgba(274, 274, 274, 0.08) 66%, \n      rgba(80, 80, 80, 0.08) 66%, \n      rgba(80, 80, 80, 0.08) 100%\n    ),linear-gradient(\n      160deg,\n      rgba(274, 274, 274, 0.07) 0%, \n      rgba(274, 274, 274, 0.07) 33%, \n      rgba(75, 75, 75, 0.07) 33%, \n      rgba(75, 75, 75, 0.07) 66%, \n      rgba(67, 67, 67, 0.07) 66%, \n      rgba(67, 67, 67, 0.07) 100%\n    ),linear-gradient(\n      348deg,\n      rgba(317, 317, 317, 0.01) 0%, \n      rgba(317, 317, 317, 0.01) 33%, \n      rgba(297, 297, 297, 0.01) 33%, \n      rgba(297, 297, 297, 0.01) 66%, \n      rgba(153, 153, 153, 0.01) 66%, \n      rgba(153, 153, 153, 0.01) 100%\n    ),linear-gradient(\n      320deg,\n      rgba(22, 22, 22, 0.08) 0%, \n      rgba(22, 22, 22, 0.08) 33%, \n      rgba(301, 301, 301, 0.08) 33%, \n      rgba(301, 301, 301, 0.08) 66%, \n      rgba(73, 73, 73, 0.08) 66%, \n      rgba(73, 73, 73, 0.08) 100%\n    ),linear-gradient(\n      2deg,\n      rgba(332, 332, 332, 0.03) 0%, \n      rgba(332, 332, 332, 0.03) 33%, \n      rgba(98, 98, 98, 0.03) 33%, \n      rgba(98, 98, 98, 0.03) 66%, \n      rgba(103, 103, 103, 0.03) 66%, \n      rgba(103, 103, 103, 0.03) 100%\n    ),\n  linear-gradient(\n    264deg, \n    hsl(507, 77%, 52%),\n    hsl(461, 91%, 49%)\n  )",
   "index": 3
 }, {
-  "image": "/static/projects/pushover.png",
   "isReady": true,
   "title": "Pushover",
   "url": "https://github.com/EmNudge/pushover",
   "description": "Discord bot built for team management",
   "tags": ["Discord.js", "Firebase", "Mongo DB", "Node.js", "node-cron"],
+  "background": "linear-gradient(\n      283deg,\n      rgba(244, 244, 244, 0.05) 0%, \n      rgba(244, 244, 244, 0.05) 33%, \n      rgba(37, 37, 37, 0.05) 33%, \n      rgba(37, 37, 37, 0.05) 66%, \n      rgba(289, 289, 289, 0.05) 66%, \n      rgba(289, 289, 289, 0.05) 100%\n    ),linear-gradient(\n      133deg,\n      rgba(182, 182, 182, 0) 0%, \n      rgba(182, 182, 182, 0) 33%, \n      rgba(243, 243, 243, 0) 33%, \n      rgba(243, 243, 243, 0) 66%, \n      rgba(272, 272, 272, 0) 66%, \n      rgba(272, 272, 272, 0) 100%\n    ),linear-gradient(\n      336deg,\n      rgba(247, 247, 247, 0.04) 0%, \n      rgba(247, 247, 247, 0.04) 33%, \n      rgba(164, 164, 164, 0.04) 33%, \n      rgba(164, 164, 164, 0.04) 66%, \n      rgba(194, 194, 194, 0.04) 66%, \n      rgba(194, 194, 194, 0.04) 100%\n    ),linear-gradient(\n      55deg,\n      rgba(264, 264, 264, 0.06) 0%, \n      rgba(264, 264, 264, 0.06) 33%, \n      rgba(327, 327, 327, 0.06) 33%, \n      rgba(327, 327, 327, 0.06) 66%, \n      rgba(191, 191, 191, 0.06) 66%, \n      rgba(191, 191, 191, 0.06) 100%\n    ),linear-gradient(\n      100deg,\n      rgba(255, 255, 255, 0) 0%, \n      rgba(255, 255, 255, 0) 33%, \n      rgba(354, 354, 354, 0) 33%, \n      rgba(354, 354, 354, 0) 66%, \n      rgba(3, 3, 3, 0) 66%, \n      rgba(3, 3, 3, 0) 100%\n    ),linear-gradient(\n      19deg,\n      rgba(151, 151, 151, 0.01) 0%, \n      rgba(151, 151, 151, 0.01) 33%, \n      rgba(257, 257, 257, 0.01) 33%, \n      rgba(257, 257, 257, 0.01) 66%, \n      rgba(246, 246, 246, 0.01) 66%, \n      rgba(246, 246, 246, 0.01) 100%\n    ),linear-gradient(\n      194deg,\n      rgba(243, 243, 243, 0.06) 0%, \n      rgba(243, 243, 243, 0.06) 33%, \n      rgba(135, 135, 135, 0.06) 33%, \n      rgba(135, 135, 135, 0.06) 66%, \n      rgba(300, 300, 300, 0.06) 66%, \n      rgba(300, 300, 300, 0.06) 100%\n    ),linear-gradient(\n      184deg,\n      rgba(114, 114, 114, 0.05) 0%, \n      rgba(114, 114, 114, 0.05) 33%, \n      rgba(81, 81, 81, 0.05) 33%, \n      rgba(81, 81, 81, 0.05) 66%, \n      rgba(300, 300, 300, 0.05) 66%, \n      rgba(300, 300, 300, 0.05) 100%\n    ),\n  linear-gradient(\n    156deg, \n    hsl(370, 77%, 52%),\n    hsl(324, 91%, 49%)\n  )",
   "index": 4
 }, {
-  "image": "/static/projects/styledlogs.png",
   "isReady": true,
   "title": "Styled Logs",
   "url": "https://github.com/EmNudge/Styled-Logs",
   "description": "Console log library for styling console logs",
   "tags": ["Vanilla.js"],
+  "background": "linear-gradient(\n      115deg,\n      rgba(105, 105, 105, 0.06) 0%, \n      rgba(105, 105, 105, 0.06) 33%, \n      rgba(32, 32, 32, 0.06) 33%, \n      rgba(32, 32, 32, 0.06) 66%, \n      rgba(192, 192, 192, 0.06) 66%, \n      rgba(192, 192, 192, 0.06) 100%\n    ),linear-gradient(\n      228deg,\n      rgba(229, 229, 229, 0.06) 0%, \n      rgba(229, 229, 229, 0.06) 33%, \n      rgba(342, 342, 342, 0.06) 33%, \n      rgba(342, 342, 342, 0.06) 66%, \n      rgba(296, 296, 296, 0.06) 66%, \n      rgba(296, 296, 296, 0.06) 100%\n    ),linear-gradient(\n      205deg,\n      rgba(230, 230, 230, 0.09) 0%, \n      rgba(230, 230, 230, 0.09) 33%, \n      rgba(202, 202, 202, 0.09) 33%, \n      rgba(202, 202, 202, 0.09) 66%, \n      rgba(75, 75, 75, 0.09) 66%, \n      rgba(75, 75, 75, 0.09) 100%\n    ),linear-gradient(\n      50deg,\n      rgba(86, 86, 86, 0.06) 0%, \n      rgba(86, 86, 86, 0.06) 33%, \n      rgba(315, 315, 315, 0.06) 33%, \n      rgba(315, 315, 315, 0.06) 66%, \n      rgba(207, 207, 207, 0.06) 66%, \n      rgba(207, 207, 207, 0.06) 100%\n    ),linear-gradient(\n      183deg,\n      rgba(21, 21, 21, 0.02) 0%, \n      rgba(21, 21, 21, 0.02) 33%, \n      rgba(203, 203, 203, 0.02) 33%, \n      rgba(203, 203, 203, 0.02) 66%, \n      rgba(6, 6, 6, 0.02) 66%, \n      rgba(6, 6, 6, 0.02) 100%\n    ),linear-gradient(\n      123deg,\n      rgba(203, 203, 203, 0.04) 0%, \n      rgba(203, 203, 203, 0.04) 33%, \n      rgba(309, 309, 309, 0.04) 33%, \n      rgba(309, 309, 309, 0.04) 66%, \n      rgba(243, 243, 243, 0.04) 66%, \n      rgba(243, 243, 243, 0.04) 100%\n    ),linear-gradient(\n      47deg,\n      rgba(22, 22, 22, 0.06) 0%, \n      rgba(22, 22, 22, 0.06) 33%, \n      rgba(73, 73, 73, 0.06) 33%, \n      rgba(73, 73, 73, 0.06) 66%, \n      rgba(29, 29, 29, 0.06) 66%, \n      rgba(29, 29, 29, 0.06) 100%\n    ),linear-gradient(\n      272deg,\n      rgba(316, 316, 316, 0.07) 0%, \n      rgba(316, 316, 316, 0.07) 33%, \n      rgba(59, 59, 59, 0.07) 33%, \n      rgba(59, 59, 59, 0.07) 66%, \n      rgba(205, 205, 205, 0.07) 66%, \n      rgba(205, 205, 205, 0.07) 100%\n    ),\n  linear-gradient(\n    327deg, \n    hsl(475, 77%, 52%),\n    hsl(429, 91%, 49%)\n  )",
   "index": 5
 }];
 var tags = ["React.js", "Gatsby.js", "Scss", "Vue.js", "Firebase", "Particles.js", "anime.js", "Stencil.js", "Typescript", "Next.js", "MDX", "human-date", "Discord.js", "Mongo DB", "Node.js", "node-cron", "Vanilla.js"];
