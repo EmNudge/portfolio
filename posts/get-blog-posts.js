@@ -1,45 +1,33 @@
-// This file's code is run before Next touches anything
-// It is Node.js code that returns
-const fs = require("fs");
 const path = require("path");
 const hdate = require("human-date");
+const getFiles = require("../utils/getFiles");
 
-const DIR = path.join(process.cwd(), "/pages/blog/");
-const META = /export\s+const\s+meta\s+=\s+({[\s\S]*?\n})/;
-const lastExport = /(export default)(.|\s)+?(\n+\)|;|<\/Layout>\n)/;
-const files = fs
-  .readdirSync(DIR)
-  .filter(file => file.endsWith(".md") || file.endsWith(".mdx"));
-
-module.exports = files
-  .map((file, index) => {
-    const name = path.join(DIR, file);
-    const contents = fs.readFileSync(name, "utf-8");
-
-    // error handling
-    const match = META.exec(contents);
-    if (!match || typeof match[1] !== "string") {
-      throw new Error(`${name} needs to export const meta = {}`);
-    }
-
+const options = {
+  rootPath: path.join(process.cwd(), "/pages/blog/"),
+  extension: ".mdx",
+  mutateFunc: (post, contents, fileName) => {
     // getting read time by calculating article words length / 275 WPM (average reading speed)
+    const lastExport = /(export default)(.|\s)+?(\n+\)|;|<\/Layout>\n)/;
     const lastExpCapture = contents.match(lastExport);
     const article = contents
       .slice(lastExpCapture.index + lastExpCapture[0].length)
       .trim();
     const readTime = Math.ceil(article.split(" ").length / 275);
 
-    // eslint-disable-next-line no-eval
-    const meta = eval("(" + match[1] + ")");
-    const publishedAt = hdate.prettyPrint(meta.publishedAt);
+    // getting the prettier version of the date supplied
+    const publishedAt = hdate.prettyPrint(post.publishedAt);
+
+    const path = "/blog/" + fileName.replace(/\.mdx?$/, "");
 
     return {
-      ...meta,
+      ...post,
+      readTime,
       publishedAt,
-      path: "/blog/" + file.replace(/\.mdx?$/, ""),
-      index,
-      readTime
+      path
     };
-  })
-  .filter(meta => meta.published)
-  .sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+  },
+  filterFunc: post => post.published,
+  sortFunc: (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
+};
+
+module.exports = getFiles(options);
