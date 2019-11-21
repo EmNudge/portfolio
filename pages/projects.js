@@ -1,6 +1,6 @@
 import Layout from "../components/layouts/Main";
 import Searchbox from "../components/Searchbox";
-import {projects, tags} from "../projects/index";
+import { projects, tags } from "../data/projects";
 import ProjectBanner from "../components/ProjectBanner";
 
 const Projects = () => {

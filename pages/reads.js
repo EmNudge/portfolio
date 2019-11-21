@@ -1,5 +1,5 @@
 import Layout from '../components/layouts/Main';
-import reads from '../reads/index'
+import reads from '../data/reads/index'
 import ReadStub from '../components/ReadStub'
 
 const Reads = () => (

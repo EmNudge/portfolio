@@ -1,9 +1,10 @@
 const path = require("path");
 const hdate = require("human-date");
-const getFiles = require("../utils/getFiles");
+const getFiles = require("../../../utils/getFiles");
 
 const options = {
   rootPath: path.join(process.cwd(), "/data/reads/"),
+  excludeFiles: ["index.js"],
   mutateFunc(recentRead) {
     const readAt = hdate.prettyPrint(recentRead.readAt);
     const createdAt = hdate.prettyPrint(recentRead.createdAt);

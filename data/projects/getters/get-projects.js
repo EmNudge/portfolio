@@ -1,5 +1,5 @@
 const path = require("path");
-const getFiles = require("../utils/getFiles");
+const getFiles = require("../../../utils/getFiles");
 
 function getBgCSS() {
   const randAng = () => Math.floor(Math.random() * 360);
@@ -40,6 +40,7 @@ function getBgCSS() {
 
 const options = {
   rootPath: path.join(process.cwd(), "/data/projects/"),
+  excludeFiles: ["index.js"],
   filterFunc: project => project.isReady,
   mutateFunc: project => ({ ...project, background: getBgCSS() })
 };

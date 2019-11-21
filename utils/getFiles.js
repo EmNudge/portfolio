@@ -3,16 +3,26 @@ const path = require("path");
 
 module.exports = function getFiles(options) {
   // structure of the object
-  const { rootPath, extension, sortFunc, filterFunc, mutateFunc } = options;
+  const {
+    rootPath,
+    extension,
+    sortFunc,
+    filterFunc,
+    mutateFunc,
+    excludeFiles
+  } = options;
 
   const META = /export\s+const\s+meta\s+=\s+({[\s\S]*?\n})/;
 
-  // gets custom extension or default
-  const files = fs
-    .readdirSync(rootPath)
-    .filter(file =>
-      extension != undefined ? file.endsWith(extension) : file.endsWith(".js")
-    );
+  // gets file names
+  const files = fs.readdirSync(rootPath).filter(file => {
+    // exclude the excluded file
+    if (excludeFiles && excludeFiles.includes(file)) return false;
+    // make sure it ends with specific extension or default
+    return extension != undefined
+      ? file.endsWith(extension)
+      : file.endsWith(".js");
+  });
 
   const data = files.map((file, index) => {
     const name = path.join(rootPath, file);
