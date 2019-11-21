@@ -19,7 +19,8 @@ const Header = ({currentRoute}) => {
   const pages = [
     {route: "/", title: "About"},
     {route: "/projects", title: "Projects"},
-    {route: "/blog", title: "Blog"}
+    {route: "/blog", title: "Blog"},
+    {route: "/reads", title: "Reads"},
   ];
 
   const isRoute = route => {
