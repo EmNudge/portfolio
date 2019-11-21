@@ -29,7 +29,7 @@ webpackHotUpdate("styles",{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571144201008");
+            injectCss(link, link.href.split("?")[0] + "?unix=1574356487786");
           });
       }
     }
@@ -66,7 +66,7 @@ webpackHotUpdate("styles",{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571144200993");
+            injectCss(link, link.href.split("?")[0] + "?unix=1574356487773");
           });
       }
     }
@@ -74,10 +74,10 @@ webpackHotUpdate("styles",{
 
 /***/ }),
 
-/***/ "./components/ProjectBanner/index.scss":
-/*!*********************************************!*\
-  !*** ./components/ProjectBanner/index.scss ***!
-  \*********************************************/
+/***/ "./components/PostStub/index.scss":
+/*!****************************************!*\
+  !*** ./components/PostStub/index.scss ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -103,44 +103,7 @@ webpackHotUpdate("styles",{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571144200918");
-          });
-      }
-    }
-  
-
-/***/ }),
-
-/***/ "./components/Searchbox/index.scss":
-/*!*****************************************!*\
-  !*** ./components/Searchbox/index.scss ***!
-  \*****************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-// extracted by mini-css-extract-plugin;
-    if (true) {
-      var injectCss = function injectCss(prev, href) {
-        var link = prev.cloneNode();
-        link.href = href;
-        link.onload = function() {
-          prev.parentNode.removeChild(prev);
-        };
-        prev.stale = true;
-        prev.parentNode.insertBefore(link, prev);
-      };
-      module.hot.dispose(function() {
-        window.__webpack_reload_css__ = true;
-      });
-      if (window.__webpack_reload_css__) {
-        module.hot.__webpack_reload_css__ = false;
-        console.log("[HMR] Reloading stylesheets...");
-        var prefix = document.location.protocol + '//' + document.location.host;
-        document
-          .querySelectorAll("link[href][rel=stylesheet]")
-          .forEach(function(link) {
-            if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571144200904");
+            injectCss(link, link.href.split("?")[0] + "?unix=1574356487727");
           });
       }
     }
@@ -177,7 +140,7 @@ webpackHotUpdate("styles",{
           .querySelectorAll("link[href][rel=stylesheet]")
           .forEach(function(link) {
             if (!link.href.match(prefix) || link.stale) return;
-            injectCss(link, link.href.split("?")[0] + "?unix=1571144200880");
+            injectCss(link, link.href.split("?")[0] + "?unix=1574356487737");
           });
       }
     }
@@ -186,4 +149,4 @@ webpackHotUpdate("styles",{
 /***/ })
 
 })
-//# sourceMappingURL=styles.6873e1fa7cbb7b13c8b3.hot-update.js.map
+//# sourceMappingURL=styles.5cf7993578e0dc950db6.hot-update.js.map

@@ -1,7 +1,7 @@
 import {useRouter} from "next/router";
 import Header from "../../Header";
 import Head from "../../Head";
-import posts from "../../../posts/index";
+import posts from "../../../data/posts";
 import "./index.scss";
 
 const Layout = ({title, children}) => {

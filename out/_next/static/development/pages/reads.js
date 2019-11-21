@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/projects.js"],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/reads.js"],{
 
 /***/ "./components/Head/index.js":
 /*!**********************************!*\
@@ -260,10 +260,10 @@ var Header = function Header(_ref) {
 
 /***/ }),
 
-/***/ "./components/ProjectBanner/index.js":
-/*!*******************************************!*\
-  !*** ./components/ProjectBanner/index.js ***!
-  \*******************************************/
+/***/ "./components/ReadStub/index.js":
+/*!**************************************!*\
+  !*** ./components/ReadStub/index.js ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -271,303 +271,73 @@ var Header = function Header(_ref) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./index.scss */ "./components/ProjectBanner/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/ProjectBanner/index.js";
+/* harmony import */ var next_Link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/Link */ "./node_modules/next/Link.js");
+/* harmony import */ var next_Link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_Link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./index.scss */ "./components/ReadStub/index.scss");
+/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_2__);
+var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/ReadStub/index.js";
 
 
 
-var ProjectBanner = function ProjectBanner(_ref) {
-  var title = _ref.title,
+
+var PostStub = function PostStub(_ref) {
+  var author = _ref.author,
+      title = _ref.title,
       url = _ref.url,
       description = _ref.description,
-      tags = _ref.tags,
-      onTagClick = _ref.onTagClick,
-      animationDelay = _ref.animationDelay,
-      selectedTags = _ref.selectedTags,
-      background = _ref.background;
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "project-banner",
-    style: {
-      animationDelay: animationDelay
-    },
+      readAt = _ref.readAt,
+      createdAt = _ref.createdAt;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_Link__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    href: url,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 5
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "post",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "bg-card",
-    style: {
-      background: background
+    className: "meta",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
     },
+    __self: this
+  }, author, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "break",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, "\u25CF"), "created at ", createdAt, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "break",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, "\u25CF"), "read at ", readAt), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
     },
     __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "main",
+  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 16
-    },
-    __self: this
-  }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "normal",
-    href: url,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 17
-    },
-    __self: this
-  }, url), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, description)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-    className: "tags",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, tags.map(function (tag) {
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-      onClick: function onClick() {
-        return onTagClick(tag);
-      },
-      key: tag,
-      className: selectedTags.includes(tag) ? "selected" : "",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 24
-      },
-      __self: this
-    }, tag);
-  })));
+  }, description)));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (ProjectBanner);
-
-/***/ }),
-
-/***/ "./components/Searchbox/index.js":
-/*!***************************************!*\
-  !*** ./components/Searchbox/index.js ***!
-  \***************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./index.scss */ "./components/Searchbox/index.scss");
-/* harmony import */ var _index_scss__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_index_scss__WEBPACK_IMPORTED_MODULE_3__);
-
-
-var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/components/Searchbox/index.js";
-
-
-
-var Searchbox = function Searchbox(_ref) {
-  var tags = _ref.tags,
-      addedTags = _ref.addedTags,
-      onChange = _ref.onChange;
-
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(""),
-      _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState, 2),
-      search = _React$useState2[0],
-      setSearch = _React$useState2[1];
-
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(false),
-      _React$useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__["default"])(_React$useState3, 2),
-      isFocused = _React$useState4[0],
-      setIsFocues = _React$useState4[1];
-
-  var searchContainer = react__WEBPACK_IMPORTED_MODULE_2___default.a.useRef();
-
-  var getTags = function getTags() {
-    return tags.filter(function (tag) {
-      return tag.toUpperCase().includes(search.toUpperCase()) && !addedTags.includes(tag);
-    });
-  };
-
-  var getAddedTags = function getAddedTags() {
-    var width = searchContainer.current ? searchContainer.current.clientWidth : 600;
-    return addedTags.slice(0, width > 550 ? 3 : 2);
-  };
-
-  var getLeftoverTagNum = function getLeftoverTagNum() {
-    var num = addedTags.length - getAddedTags().length;
-    if (num === 0) return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_2___default.a.Fragment, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 23
-      },
-      __self: this
-    });
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      className: "leftovers",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    }, num);
-  };
-
-  var addTag = function addTag(tag) {
-    onChange([tag].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(addedTags)));
-    setSearch("");
-  };
-
-  var removeTag = function removeTag(tag) {
-    onChange(addedTags.filter(function (addedTag) {
-      return addedTag !== tag;
-    }));
-  };
-
-  var handleKeyDown = function handleKeyDown(e) {
-    if (e.key === "Enter" && getTags()[0]) {
-      addTag(getTags()[0]);
-    } else if (e.key === "Backspace" && !search) {
-      removeTag(addedTags[addedTags.length - 1]);
-    }
-  };
-
-  var pressOutside = function pressOutside(e) {
-    if (!searchContainer.current) return;
-    if (searchContainer.current.contains(e.target)) return;
-    setIsFocues(false);
-  };
-
-  react__WEBPACK_IMPORTED_MODULE_2___default.a.useEffect(function () {
-    document.addEventListener("mousedown", pressOutside, false);
-    document.addEventListener("touchstart", pressOutside, false);
-    return function () {
-      document.removeEventListener("mousedown", pressOutside, false);
-      document.removeEventListener("touchstart", pressOutside, false);
-    };
-  }, []);
-  return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "search-container",
-    ref: searchContainer,
-    onClick: function onClick() {
-      return setIsFocues(true);
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 61
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("label", {
-    htmlFor: "search-box",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 65
-    },
-    __self: this
-  }, "Search"), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "input-row",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 66
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("input", {
-    id: "search-box",
-    type: "text",
-    placeholder: "Start typing...",
-    value: search,
-    onChange: function onChange(e) {
-      return setSearch(e.target.value);
-    },
-    onFocus: function onFocus() {
-      return setIsFocues(true);
-    },
-    onBlur: function onBlur() {
-      return setIsFocues(false);
-    },
-    onKeyDown: handleKeyDown,
-    autoComplete: "off",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 67
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "added-tags",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: this
-  }, getAddedTags().map(function (tag) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      key: tag,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 80
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 81
-      },
-      __self: this
-    }, tag), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      className: "remove-btn",
-      onClick: function onClick() {
-        return removeTag(tag);
-      },
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 82
-      },
-      __self: this
-    }, react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("span", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 83
-      },
-      __self: this
-    }, "x")));
-  }), getLeftoverTagNum())), react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-    className: "tags-container" + (isFocused ? " open" : ""),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 90
-    },
-    __self: this
-  }, getTags().map(function (tag) {
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", {
-      onClick: function onClick() {
-        return addTag(tag);
-      },
-      key: tag,
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 92
-      },
-      __self: this
-    }, tag);
-  })));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Searchbox);
+/* harmony default export */ __webpack_exports__["default"] = (PostStub);
 
 /***/ }),
 
@@ -653,87 +423,26 @@ var Layout = function Layout(_ref) {
 
 /***/ }),
 
-/***/ "./data/projects/index.js":
-/*!********************************!*\
-  !*** ./data/projects/index.js ***!
-  \********************************/
+/***/ "./data/reads/index.js":
+/*!*****************************!*\
+  !*** ./data/reads/index.js ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var projects = [{
-  "isReady": true,
-  "title": "Bad Kern",
-  "url": "https://github.com/EmNudge/Bad-Kern",
-  "description": "Joke bookmarklet for kerning paragraphs poorly",
-  "tags": ["Vanilla.js"],
-  "background": "linear-gradient(\n      45deg,\n      rgba(17, 17, 17, 0.03) 0%, \n      rgba(17, 17, 17, 0.03) 33%, \n      rgba(281, 281, 281, 0.03) 33%, \n      rgba(281, 281, 281, 0.03) 66%, \n      rgba(126, 126, 126, 0.03) 66%, \n      rgba(126, 126, 126, 0.03) 100%\n    ),linear-gradient(\n      108deg,\n      rgba(300, 300, 300, 0.03) 0%, \n      rgba(300, 300, 300, 0.03) 33%, \n      rgba(7, 7, 7, 0.03) 33%, \n      rgba(7, 7, 7, 0.03) 66%, \n      rgba(223, 223, 223, 0.03) 66%, \n      rgba(223, 223, 223, 0.03) 100%\n    ),linear-gradient(\n      127deg,\n      rgba(285, 285, 285, 0.04) 0%, \n      rgba(285, 285, 285, 0.04) 33%, \n      rgba(194, 194, 194, 0.04) 33%, \n      rgba(194, 194, 194, 0.04) 66%, \n      rgba(174, 174, 174, 0.04) 66%, \n      rgba(174, 174, 174, 0.04) 100%\n    ),linear-gradient(\n      38deg,\n      rgba(98, 98, 98, 0.05) 0%, \n      rgba(98, 98, 98, 0.05) 33%, \n      rgba(146, 146, 146, 0.05) 33%, \n      rgba(146, 146, 146, 0.05) 66%, \n      rgba(214, 214, 214, 0.05) 66%, \n      rgba(214, 214, 214, 0.05) 100%\n    ),linear-gradient(\n      9deg,\n      rgba(277, 277, 277, 0.04) 0%, \n      rgba(277, 277, 277, 0.04) 33%, \n      rgba(187, 187, 187, 0.04) 33%, \n      rgba(187, 187, 187, 0.04) 66%, \n      rgba(68, 68, 68, 0.04) 66%, \n      rgba(68, 68, 68, 0.04) 100%\n    ),linear-gradient(\n      106deg,\n      rgba(212, 212, 212, 0.07) 0%, \n      rgba(212, 212, 212, 0.07) 33%, \n      rgba(307, 307, 307, 0.07) 33%, \n      rgba(307, 307, 307, 0.07) 66%, \n      rgba(252, 252, 252, 0.07) 66%, \n      rgba(252, 252, 252, 0.07) 100%\n    ),linear-gradient(\n      61deg,\n      rgba(332, 332, 332, 0.07) 0%, \n      rgba(332, 332, 332, 0.07) 33%, \n      rgba(321, 321, 321, 0.07) 33%, \n      rgba(321, 321, 321, 0.07) 66%, \n      rgba(176, 176, 176, 0.07) 66%, \n      rgba(176, 176, 176, 0.07) 100%\n    ),linear-gradient(\n      189deg,\n      rgba(147, 147, 147, 0.04) 0%, \n      rgba(147, 147, 147, 0.04) 33%, \n      rgba(11, 11, 11, 0.04) 33%, \n      rgba(11, 11, 11, 0.04) 66%, \n      rgba(190, 190, 190, 0.04) 66%, \n      rgba(190, 190, 190, 0.04) 100%\n    ),\n  linear-gradient(\n    323deg, \n    hsl(32, 77%, 52%),\n    hsl(32, 91%, 49%)\n  )",
+var recentReads = [{
+  "author": "Keith Cirkel",
+  "title": "Metaprogramming in ES6: Symbols and why they're awesome",
+  "url": "https://www.keithcirkel.co.uk/metaprogramming-in-es6-symbols/",
+  "description": "A fantastic read on symbols & well-known symbols. I trashed an article I was writing when I found this one.",
+  "readAt": "November 18th, 2019",
+  "createdAt": "June 18th, 2015",
   "index": 0
-}, {
-  "isReady": true,
-  "title": "Voice Over",
-  "url": "https://emnudge.com",
-  "description": "Voice acting and voice over portfolio",
-  "tags": ["React.js", "Gatsby.js", "Scss"],
-  "background": "linear-gradient(\n      316deg,\n      rgba(232, 232, 232, 0.06) 0%, \n      rgba(232, 232, 232, 0.06) 33%, \n      rgba(32, 32, 32, 0.06) 33%, \n      rgba(32, 32, 32, 0.06) 66%, \n      rgba(119, 119, 119, 0.06) 66%, \n      rgba(119, 119, 119, 0.06) 100%\n    ),linear-gradient(\n      220deg,\n      rgba(52, 52, 52, 0.07) 0%, \n      rgba(52, 52, 52, 0.07) 33%, \n      rgba(201, 201, 201, 0.07) 33%, \n      rgba(201, 201, 201, 0.07) 66%, \n      rgba(5, 5, 5, 0.07) 66%, \n      rgba(5, 5, 5, 0.07) 100%\n    ),linear-gradient(\n      157deg,\n      rgba(140, 140, 140, 0.09) 0%, \n      rgba(140, 140, 140, 0.09) 33%, \n      rgba(81, 81, 81, 0.09) 33%, \n      rgba(81, 81, 81, 0.09) 66%, \n      rgba(264, 264, 264, 0.09) 66%, \n      rgba(264, 264, 264, 0.09) 100%\n    ),linear-gradient(\n      34deg,\n      rgba(212, 212, 212, 0.03) 0%, \n      rgba(212, 212, 212, 0.03) 33%, \n      rgba(56, 56, 56, 0.03) 33%, \n      rgba(56, 56, 56, 0.03) 66%, \n      rgba(50, 50, 50, 0.03) 66%, \n      rgba(50, 50, 50, 0.03) 100%\n    ),linear-gradient(\n      222deg,\n      rgba(3, 3, 3, 0.02) 0%, \n      rgba(3, 3, 3, 0.02) 33%, \n      rgba(12, 12, 12, 0.02) 33%, \n      rgba(12, 12, 12, 0.02) 66%, \n      rgba(182, 182, 182, 0.02) 66%, \n      rgba(182, 182, 182, 0.02) 100%\n    ),linear-gradient(\n      355deg,\n      rgba(168, 168, 168, 0.03) 0%, \n      rgba(168, 168, 168, 0.03) 33%, \n      rgba(216, 216, 216, 0.03) 33%, \n      rgba(216, 216, 216, 0.03) 66%, \n      rgba(79, 79, 79, 0.03) 66%, \n      rgba(79, 79, 79, 0.03) 100%\n    ),linear-gradient(\n      354deg,\n      rgba(329, 329, 329, 0.08) 0%, \n      rgba(329, 329, 329, 0.08) 33%, \n      rgba(279, 279, 279, 0.08) 33%, \n      rgba(279, 279, 279, 0.08) 66%, \n      rgba(89, 89, 89, 0.08) 66%, \n      rgba(89, 89, 89, 0.08) 100%\n    ),linear-gradient(\n      202deg,\n      rgba(236, 236, 236, 0.04) 0%, \n      rgba(236, 236, 236, 0.04) 33%, \n      rgba(232, 232, 232, 0.04) 33%, \n      rgba(232, 232, 232, 0.04) 66%, \n      rgba(218, 218, 218, 0.04) 66%, \n      rgba(218, 218, 218, 0.04) 100%\n    ),\n  linear-gradient(\n    122deg, \n    hsl(215, 77%, 52%),\n    hsl(215, 91%, 49%)\n  )",
-  "index": 1
-}, {
-  "isReady": true,
-  "title": "KAFF",
-  "url": "https://kaffsoftware.com",
-  "description": "Games company website made with Vue.js and firebase",
-  "tags": ["Vue.js", "Firebase", "Particles.js", "anime.js", "Scss"],
-  "background": "linear-gradient(\n      313deg,\n      rgba(222, 222, 222, 0) 0%, \n      rgba(222, 222, 222, 0) 33%, \n      rgba(341, 341, 341, 0) 33%, \n      rgba(341, 341, 341, 0) 66%, \n      rgba(229, 229, 229, 0) 66%, \n      rgba(229, 229, 229, 0) 100%\n    ),linear-gradient(\n      278deg,\n      rgba(45, 45, 45, 0) 0%, \n      rgba(45, 45, 45, 0) 33%, \n      rgba(217, 217, 217, 0) 33%, \n      rgba(217, 217, 217, 0) 66%, \n      rgba(64, 64, 64, 0) 66%, \n      rgba(64, 64, 64, 0) 100%\n    ),linear-gradient(\n      355deg,\n      rgba(96, 96, 96, 0.05) 0%, \n      rgba(96, 96, 96, 0.05) 33%, \n      rgba(214, 214, 214, 0.05) 33%, \n      rgba(214, 214, 214, 0.05) 66%, \n      rgba(207, 207, 207, 0.05) 66%, \n      rgba(207, 207, 207, 0.05) 100%\n    ),linear-gradient(\n      202deg,\n      rgba(15, 15, 15, 0.05) 0%, \n      rgba(15, 15, 15, 0.05) 33%, \n      rgba(336, 336, 336, 0.05) 33%, \n      rgba(336, 336, 336, 0.05) 66%, \n      rgba(65, 65, 65, 0.05) 66%, \n      rgba(65, 65, 65, 0.05) 100%\n    ),linear-gradient(\n      231deg,\n      rgba(108, 108, 108, 0.06) 0%, \n      rgba(108, 108, 108, 0.06) 33%, \n      rgba(141, 141, 141, 0.06) 33%, \n      rgba(141, 141, 141, 0.06) 66%, \n      rgba(47, 47, 47, 0.06) 66%, \n      rgba(47, 47, 47, 0.06) 100%\n    ),linear-gradient(\n      107deg,\n      rgba(231, 231, 231, 0.03) 0%, \n      rgba(231, 231, 231, 0.03) 33%, \n      rgba(200, 200, 200, 0.03) 33%, \n      rgba(200, 200, 200, 0.03) 66%, \n      rgba(307, 307, 307, 0.03) 66%, \n      rgba(307, 307, 307, 0.03) 100%\n    ),linear-gradient(\n      262deg,\n      rgba(316, 316, 316, 0.09) 0%, \n      rgba(316, 316, 316, 0.09) 33%, \n      rgba(210, 210, 210, 0.09) 33%, \n      rgba(210, 210, 210, 0.09) 66%, \n      rgba(310, 310, 310, 0.09) 66%, \n      rgba(310, 310, 310, 0.09) 100%\n    ),linear-gradient(\n      62deg,\n      rgba(57, 57, 57, 0.05) 0%, \n      rgba(57, 57, 57, 0.05) 33%, \n      rgba(93, 93, 93, 0.05) 33%, \n      rgba(93, 93, 93, 0.05) 66%, \n      rgba(304, 304, 304, 0.05) 66%, \n      rgba(304, 304, 304, 0.05) 100%\n    ),\n  linear-gradient(\n    106deg, \n    hsl(167, 77%, 52%),\n    hsl(167, 91%, 49%)\n  )",
-  "index": 2
-}, {
-  "isReady": true,
-  "title": "Keyframed Audioplayer",
-  "url": "http://keyframed-audioplayer.netlify.com",
-  "description": "Web component audioplayer with keyframeable attributes",
-  "tags": ["Stencil.js", "Typescript"],
-  "background": "linear-gradient(\n      33deg,\n      rgba(163, 163, 163, 0.02) 0%, \n      rgba(163, 163, 163, 0.02) 33%, \n      rgba(347, 347, 347, 0.02) 33%, \n      rgba(347, 347, 347, 0.02) 66%, \n      rgba(272, 272, 272, 0.02) 66%, \n      rgba(272, 272, 272, 0.02) 100%\n    ),linear-gradient(\n      107deg,\n      rgba(164, 164, 164, 0) 0%, \n      rgba(164, 164, 164, 0) 33%, \n      rgba(70, 70, 70, 0) 33%, \n      rgba(70, 70, 70, 0) 66%, \n      rgba(21, 21, 21, 0) 66%, \n      rgba(21, 21, 21, 0) 100%\n    ),linear-gradient(\n      161deg,\n      rgba(254, 254, 254, 0.09) 0%, \n      rgba(254, 254, 254, 0.09) 33%, \n      rgba(245, 245, 245, 0.09) 33%, \n      rgba(245, 245, 245, 0.09) 66%, \n      rgba(296, 296, 296, 0.09) 66%, \n      rgba(296, 296, 296, 0.09) 100%\n    ),linear-gradient(\n      317deg,\n      rgba(138, 138, 138, 0.03) 0%, \n      rgba(138, 138, 138, 0.03) 33%, \n      rgba(50, 50, 50, 0.03) 33%, \n      rgba(50, 50, 50, 0.03) 66%, \n      rgba(55, 55, 55, 0.03) 66%, \n      rgba(55, 55, 55, 0.03) 100%\n    ),linear-gradient(\n      297deg,\n      rgba(113, 113, 113, 0.05) 0%, \n      rgba(113, 113, 113, 0.05) 33%, \n      rgba(347, 347, 347, 0.05) 33%, \n      rgba(347, 347, 347, 0.05) 66%, \n      rgba(66, 66, 66, 0.05) 66%, \n      rgba(66, 66, 66, 0.05) 100%\n    ),linear-gradient(\n      336deg,\n      rgba(343, 343, 343, 0.08) 0%, \n      rgba(343, 343, 343, 0.08) 33%, \n      rgba(306, 306, 306, 0.08) 33%, \n      rgba(306, 306, 306, 0.08) 66%, \n      rgba(254, 254, 254, 0.08) 66%, \n      rgba(254, 254, 254, 0.08) 100%\n    ),linear-gradient(\n      265deg,\n      rgba(228, 228, 228, 0.02) 0%, \n      rgba(228, 228, 228, 0.02) 33%, \n      rgba(200, 200, 200, 0.02) 33%, \n      rgba(200, 200, 200, 0.02) 66%, \n      rgba(36, 36, 36, 0.02) 66%, \n      rgba(36, 36, 36, 0.02) 100%\n    ),linear-gradient(\n      16deg,\n      rgba(73, 73, 73, 0.01) 0%, \n      rgba(73, 73, 73, 0.01) 33%, \n      rgba(291, 291, 291, 0.01) 33%, \n      rgba(291, 291, 291, 0.01) 66%, \n      rgba(101, 101, 101, 0.01) 66%, \n      rgba(101, 101, 101, 0.01) 100%\n    ),\n  linear-gradient(\n    144deg, \n    hsl(282, 77%, 52%),\n    hsl(282, 91%, 49%)\n  )",
-  "index": 3
-}, {
-  "isReady": true,
-  "title": "Portfolio",
-  "url": "https://kipperman.co",
-  "description": "Web development portfolio",
-  "tags": ["React.js", "Next.js", "Scss", "MDX", "human-date"],
-  "background": "linear-gradient(\n      235deg,\n      rgba(24, 24, 24, 0.04) 0%, \n      rgba(24, 24, 24, 0.04) 33%, \n      rgba(289, 289, 289, 0.04) 33%, \n      rgba(289, 289, 289, 0.04) 66%, \n      rgba(208, 208, 208, 0.04) 66%, \n      rgba(208, 208, 208, 0.04) 100%\n    ),linear-gradient(\n      85deg,\n      rgba(48, 48, 48, 0.08) 0%, \n      rgba(48, 48, 48, 0.08) 33%, \n      rgba(181, 181, 181, 0.08) 33%, \n      rgba(181, 181, 181, 0.08) 66%, \n      rgba(239, 239, 239, 0.08) 66%, \n      rgba(239, 239, 239, 0.08) 100%\n    ),linear-gradient(\n      220deg,\n      rgba(173, 173, 173, 0.04) 0%, \n      rgba(173, 173, 173, 0.04) 33%, \n      rgba(310, 310, 310, 0.04) 33%, \n      rgba(310, 310, 310, 0.04) 66%, \n      rgba(58, 58, 58, 0.04) 66%, \n      rgba(58, 58, 58, 0.04) 100%\n    ),linear-gradient(\n      31deg,\n      rgba(84, 84, 84, 0.06) 0%, \n      rgba(84, 84, 84, 0.06) 33%, \n      rgba(294, 294, 294, 0.06) 33%, \n      rgba(294, 294, 294, 0.06) 66%, \n      rgba(29, 29, 29, 0.06) 66%, \n      rgba(29, 29, 29, 0.06) 100%\n    ),linear-gradient(\n      303deg,\n      rgba(185, 185, 185, 0.02) 0%, \n      rgba(185, 185, 185, 0.02) 33%, \n      rgba(30, 30, 30, 0.02) 33%, \n      rgba(30, 30, 30, 0.02) 66%, \n      rgba(45, 45, 45, 0.02) 66%, \n      rgba(45, 45, 45, 0.02) 100%\n    ),linear-gradient(\n      151deg,\n      rgba(209, 209, 209, 0.04) 0%, \n      rgba(209, 209, 209, 0.04) 33%, \n      rgba(95, 95, 95, 0.04) 33%, \n      rgba(95, 95, 95, 0.04) 66%, \n      rgba(89, 89, 89, 0.04) 66%, \n      rgba(89, 89, 89, 0.04) 100%\n    ),linear-gradient(\n      179deg,\n      rgba(316, 316, 316, 0.02) 0%, \n      rgba(316, 316, 316, 0.02) 33%, \n      rgba(206, 206, 206, 0.02) 33%, \n      rgba(206, 206, 206, 0.02) 66%, \n      rgba(279, 279, 279, 0.02) 66%, \n      rgba(279, 279, 279, 0.02) 100%\n    ),linear-gradient(\n      78deg,\n      rgba(286, 286, 286, 0.08) 0%, \n      rgba(286, 286, 286, 0.08) 33%, \n      rgba(56, 56, 56, 0.08) 33%, \n      rgba(56, 56, 56, 0.08) 66%, \n      rgba(276, 276, 276, 0.08) 66%, \n      rgba(276, 276, 276, 0.08) 100%\n    ),\n  linear-gradient(\n    126deg, \n    hsl(288, 77%, 52%),\n    hsl(288, 91%, 49%)\n  )",
-  "index": 4
-}, {
-  "image": "styledlogs.png",
-  "isReady": true,
-  "title": "Minimal Templating Lang",
-  "url": "https://github.com/EmNudge/Minimal-Templating-Lang",
-  "description": "An extremely minimal zero-dependency templating language built with node",
-  "tags": ["Node.js"],
-  "background": "linear-gradient(\n      114deg,\n      rgba(65, 65, 65, 0.01) 0%, \n      rgba(65, 65, 65, 0.01) 33%, \n      rgba(141, 141, 141, 0.01) 33%, \n      rgba(141, 141, 141, 0.01) 66%, \n      rgba(86, 86, 86, 0.01) 66%, \n      rgba(86, 86, 86, 0.01) 100%\n    ),linear-gradient(\n      284deg,\n      rgba(90, 90, 90, 0.08) 0%, \n      rgba(90, 90, 90, 0.08) 33%, \n      rgba(143, 143, 143, 0.08) 33%, \n      rgba(143, 143, 143, 0.08) 66%, \n      rgba(102, 102, 102, 0.08) 66%, \n      rgba(102, 102, 102, 0.08) 100%\n    ),linear-gradient(\n      144deg,\n      rgba(67, 67, 67, 0.07) 0%, \n      rgba(67, 67, 67, 0.07) 33%, \n      rgba(154, 154, 154, 0.07) 33%, \n      rgba(154, 154, 154, 0.07) 66%, \n      rgba(221, 221, 221, 0.07) 66%, \n      rgba(221, 221, 221, 0.07) 100%\n    ),linear-gradient(\n      289deg,\n      rgba(303, 303, 303, 0.05) 0%, \n      rgba(303, 303, 303, 0.05) 33%, \n      rgba(299, 299, 299, 0.05) 33%, \n      rgba(299, 299, 299, 0.05) 66%, \n      rgba(92, 92, 92, 0.05) 66%, \n      rgba(92, 92, 92, 0.05) 100%\n    ),linear-gradient(\n      270deg,\n      rgba(218, 218, 218, 0) 0%, \n      rgba(218, 218, 218, 0) 33%, \n      rgba(86, 86, 86, 0) 33%, \n      rgba(86, 86, 86, 0) 66%, \n      rgba(349, 349, 349, 0) 66%, \n      rgba(349, 349, 349, 0) 100%\n    ),linear-gradient(\n      100deg,\n      rgba(99, 99, 99, 0.07) 0%, \n      rgba(99, 99, 99, 0.07) 33%, \n      rgba(90, 90, 90, 0.07) 33%, \n      rgba(90, 90, 90, 0.07) 66%, \n      rgba(197, 197, 197, 0.07) 66%, \n      rgba(197, 197, 197, 0.07) 100%\n    ),linear-gradient(\n      49deg,\n      rgba(166, 166, 166, 0.05) 0%, \n      rgba(166, 166, 166, 0.05) 33%, \n      rgba(345, 345, 345, 0.05) 33%, \n      rgba(345, 345, 345, 0.05) 66%, \n      rgba(19, 19, 19, 0.05) 66%, \n      rgba(19, 19, 19, 0.05) 100%\n    ),linear-gradient(\n      118deg,\n      rgba(90, 90, 90, 0.01) 0%, \n      rgba(90, 90, 90, 0.01) 33%, \n      rgba(99, 99, 99, 0.01) 33%, \n      rgba(99, 99, 99, 0.01) 66%, \n      rgba(329, 329, 329, 0.01) 66%, \n      rgba(329, 329, 329, 0.01) 100%\n    ),\n  linear-gradient(\n    349deg, \n    hsl(119, 77%, 52%),\n    hsl(119, 91%, 49%)\n  )",
-  "index": 5
-}, {
-  "isReady": true,
-  "title": "Pushover",
-  "url": "https://github.com/EmNudge/pushover",
-  "description": "Discord bot built for team management",
-  "tags": ["Discord.js", "Firebase", "Typescript", "Mongo DB", "Node.js", "node-cron"],
-  "background": "linear-gradient(\n      24deg,\n      rgba(206, 206, 206, 0.03) 0%, \n      rgba(206, 206, 206, 0.03) 33%, \n      rgba(210, 210, 210, 0.03) 33%, \n      rgba(210, 210, 210, 0.03) 66%, \n      rgba(104, 104, 104, 0.03) 66%, \n      rgba(104, 104, 104, 0.03) 100%\n    ),linear-gradient(\n      294deg,\n      rgba(342, 342, 342, 0.09) 0%, \n      rgba(342, 342, 342, 0.09) 33%, \n      rgba(55, 55, 55, 0.09) 33%, \n      rgba(55, 55, 55, 0.09) 66%, \n      rgba(52, 52, 52, 0.09) 66%, \n      rgba(52, 52, 52, 0.09) 100%\n    ),linear-gradient(\n      115deg,\n      rgba(124, 124, 124, 0.01) 0%, \n      rgba(124, 124, 124, 0.01) 33%, \n      rgba(290, 290, 290, 0.01) 33%, \n      rgba(290, 290, 290, 0.01) 66%, \n      rgba(122, 122, 122, 0.01) 66%, \n      rgba(122, 122, 122, 0.01) 100%\n    ),linear-gradient(\n      195deg,\n      rgba(294, 294, 294, 0.02) 0%, \n      rgba(294, 294, 294, 0.02) 33%, \n      rgba(95, 95, 95, 0.02) 33%, \n      rgba(95, 95, 95, 0.02) 66%, \n      rgba(217, 217, 217, 0.02) 66%, \n      rgba(217, 217, 217, 0.02) 100%\n    ),linear-gradient(\n      116deg,\n      rgba(352, 352, 352, 0.06) 0%, \n      rgba(352, 352, 352, 0.06) 33%, \n      rgba(194, 194, 194, 0.06) 33%, \n      rgba(194, 194, 194, 0.06) 66%, \n      rgba(17, 17, 17, 0.06) 66%, \n      rgba(17, 17, 17, 0.06) 100%\n    ),linear-gradient(\n      208deg,\n      rgba(100, 100, 100, 0.07) 0%, \n      rgba(100, 100, 100, 0.07) 33%, \n      rgba(115, 115, 115, 0.07) 33%, \n      rgba(115, 115, 115, 0.07) 66%, \n      rgba(61, 61, 61, 0.07) 66%, \n      rgba(61, 61, 61, 0.07) 100%\n    ),linear-gradient(\n      52deg,\n      rgba(268, 268, 268, 0.02) 0%, \n      rgba(268, 268, 268, 0.02) 33%, \n      rgba(114, 114, 114, 0.02) 33%, \n      rgba(114, 114, 114, 0.02) 66%, \n      rgba(358, 358, 358, 0.02) 66%, \n      rgba(358, 358, 358, 0.02) 100%\n    ),linear-gradient(\n      348deg,\n      rgba(146, 146, 146, 0.01) 0%, \n      rgba(146, 146, 146, 0.01) 33%, \n      rgba(191, 191, 191, 0.01) 33%, \n      rgba(191, 191, 191, 0.01) 66%, \n      rgba(190, 190, 190, 0.01) 66%, \n      rgba(190, 190, 190, 0.01) 100%\n    ),\n  linear-gradient(\n    356deg, \n    hsl(337, 77%, 52%),\n    hsl(337, 91%, 49%)\n  )",
-  "index": 6
-}, {
-  "isReady": true,
-  "title": "Styled Logs",
-  "url": "https://github.com/EmNudge/Styled-Logs",
-  "description": "Console log library for styling console logs",
-  "tags": ["Vanilla.js"],
-  "background": "linear-gradient(\n      50deg,\n      rgba(287, 287, 287, 0.07) 0%, \n      rgba(287, 287, 287, 0.07) 33%, \n      rgba(230, 230, 230, 0.07) 33%, \n      rgba(230, 230, 230, 0.07) 66%, \n      rgba(13, 13, 13, 0.07) 66%, \n      rgba(13, 13, 13, 0.07) 100%\n    ),linear-gradient(\n      293deg,\n      rgba(294, 294, 294, 0.03) 0%, \n      rgba(294, 294, 294, 0.03) 33%, \n      rgba(126, 126, 126, 0.03) 33%, \n      rgba(126, 126, 126, 0.03) 66%, \n      rgba(130, 130, 130, 0.03) 66%, \n      rgba(130, 130, 130, 0.03) 100%\n    ),linear-gradient(\n      219deg,\n      rgba(266, 266, 266, 0) 0%, \n      rgba(266, 266, 266, 0) 33%, \n      rgba(144, 144, 144, 0) 33%, \n      rgba(144, 144, 144, 0) 66%, \n      rgba(127, 127, 127, 0) 66%, \n      rgba(127, 127, 127, 0) 100%\n    ),linear-gradient(\n      270deg,\n      rgba(3, 3, 3, 0.07) 0%, \n      rgba(3, 3, 3, 0.07) 33%, \n      rgba(157, 157, 157, 0.07) 33%, \n      rgba(157, 157, 157, 0.07) 66%, \n      rgba(311, 311, 311, 0.07) 66%, \n      rgba(311, 311, 311, 0.07) 100%\n    ),linear-gradient(\n      215deg,\n      rgba(290, 290, 290, 0.01) 0%, \n      rgba(290, 290, 290, 0.01) 33%, \n      rgba(82, 82, 82, 0.01) 33%, \n      rgba(82, 82, 82, 0.01) 66%, \n      rgba(354, 354, 354, 0.01) 66%, \n      rgba(354, 354, 354, 0.01) 100%\n    ),linear-gradient(\n      86deg,\n      rgba(224, 224, 224, 0.05) 0%, \n      rgba(224, 224, 224, 0.05) 33%, \n      rgba(233, 233, 233, 0.05) 33%, \n      rgba(233, 233, 233, 0.05) 66%, \n      rgba(347, 347, 347, 0.05) 66%, \n      rgba(347, 347, 347, 0.05) 100%\n    ),linear-gradient(\n      21deg,\n      rgba(113, 113, 113, 0.08) 0%, \n      rgba(113, 113, 113, 0.08) 33%, \n      rgba(250, 250, 250, 0.08) 33%, \n      rgba(250, 250, 250, 0.08) 66%, \n      rgba(295, 295, 295, 0.08) 66%, \n      rgba(295, 295, 295, 0.08) 100%\n    ),linear-gradient(\n      11deg,\n      rgba(357, 357, 357, 0.08) 0%, \n      rgba(357, 357, 357, 0.08) 33%, \n      rgba(151, 151, 151, 0.08) 33%, \n      rgba(151, 151, 151, 0.08) 66%, \n      rgba(187, 187, 187, 0.08) 66%, \n      rgba(187, 187, 187, 0.08) 100%\n    ),\n  linear-gradient(\n    314deg, \n    hsl(160, 77%, 52%),\n    hsl(160, 91%, 49%)\n  )",
-  "index": 7
 }];
-var tags = ["Vanilla.js", "React.js", "Gatsby.js", "Scss", "Vue.js", "Firebase", "Particles.js", "anime.js", "Stencil.js", "Typescript", "Next.js", "MDX", "human-date", "Node.js", "Discord.js", "Mongo DB", "node-cron"];
-module.exports = {
-  projects: projects,
-  tags: tags
-};
+module.exports = recentReads;
 
 /***/ }),
 
@@ -7144,21 +6853,21 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
-/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fprojects&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Fprojects.js!./":
-/*!***********************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fprojects&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Fprojects.js ***!
-  \***********************************************************************************************************************************************************************************************/
+/***/ "./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Freads&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Freads.js!./":
+/*!*****************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Freads&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Freads.js ***!
+  \*****************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-    (window.__NEXT_P=window.__NEXT_P||[]).push(["/projects", function() {
-      var page = __webpack_require__(/*! ./pages/projects.js */ "./pages/projects.js")
+    (window.__NEXT_P=window.__NEXT_P||[]).push(["/reads", function() {
+      var page = __webpack_require__(/*! ./pages/reads.js */ "./pages/reads.js")
       if(true) {
-        module.hot.accept(/*! ./pages/projects.js */ "./pages/projects.js", function() {
-          if(!next.router.components["/projects"]) return
-          var updatedPage = __webpack_require__(/*! ./pages/projects.js */ "./pages/projects.js")
-          next.router.update("/projects", updatedPage.default || updatedPage)
+        module.hot.accept(/*! ./pages/reads.js */ "./pages/reads.js", function() {
+          if(!next.router.components["/reads"]) return
+          var updatedPage = __webpack_require__(/*! ./pages/reads.js */ "./pages/reads.js")
+          next.router.update("/reads", updatedPage.default || updatedPage)
         })
       }
       return { page: page.default || page }
@@ -11442,106 +11151,51 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./pages/projects.js":
-/*!***************************!*\
-  !*** ./pages/projects.js ***!
-  \***************************/
+/***/ "./pages/reads.js":
+/*!************************!*\
+  !*** ./pages/reads.js ***!
+  \************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/extends */ "./node_modules/@babel/runtime-corejs2/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/toConsumableArray.js");
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime-corejs2/helpers/esm/slicedToArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _components_layouts_Main__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/layouts/Main */ "./components/layouts/Main/index.js");
-/* harmony import */ var _components_Searchbox__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Searchbox */ "./components/Searchbox/index.js");
-/* harmony import */ var _data_projects__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../data/projects */ "./data/projects/index.js");
-/* harmony import */ var _data_projects__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_data_projects__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _components_ProjectBanner__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/ProjectBanner */ "./components/ProjectBanner/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_layouts_Main__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/layouts/Main */ "./components/layouts/Main/index.js");
+/* harmony import */ var _data_reads_index__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../data/reads/index */ "./data/reads/index.js");
+/* harmony import */ var _data_reads_index__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_data_reads_index__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _components_ReadStub__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/ReadStub */ "./components/ReadStub/index.js");
 
-
-
-var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/pages/projects.js";
+var _jsxFileName = "/Users/emnudge/workspace/kipperman/next-js/pages/reads.js";
 
 
 
 
 
-
-var Projects = function Projects() {
-  var _React$useState = react__WEBPACK_IMPORTED_MODULE_3___default.a.useState([]),
-      _React$useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_React$useState, 2),
-      searchTags = _React$useState2[0],
-      setSearchTags = _React$useState2[1];
-
-  var _React$useState3 = react__WEBPACK_IMPORTED_MODULE_3___default.a.useState(1),
-      _React$useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_2__["default"])(_React$useState3, 2),
-      rerenderForcer = _React$useState4[0],
-      setRerenderForcer = _React$useState4[1];
-
-  var addTag = function addTag(tag) {
-    if (searchTags.includes(tag)) return;
-    setSearchTags([].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_1__["default"])(searchTags), [tag]));
-  };
-
-  var getFilteredProjects = function getFilteredProjects() {
-    if (!searchTags.length) return _data_projects__WEBPACK_IMPORTED_MODULE_6__["projects"];
-    return _data_projects__WEBPACK_IMPORTED_MODULE_6__["projects"].filter(function (project) {
-      return searchTags.every(function (tag) {
-        return project.tags.includes(tag);
-      });
-    });
-  };
-
-  var handleChange = function handleChange(tag) {
-    setRerenderForcer(rerenderForcer * -1);
-    setSearchTags(tag);
-  };
-
-  return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_layouts_Main__WEBPACK_IMPORTED_MODULE_4__["default"], {
-    title: "Projects",
+var Reads = function Reads() {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_layouts_Main__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    title: "Recent Reads",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 6
     },
     __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_Searchbox__WEBPACK_IMPORTED_MODULE_5__["default"], {
-    tags: _data_projects__WEBPACK_IMPORTED_MODULE_6__["tags"],
-    addedTags: searchTags,
-    onChange: handleChange,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 31
-    },
-    __self: this
-  }), react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", {
-    className: "projects-container",
-    key: rerenderForcer,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, getFilteredProjects().map(function (project, index) {
-    return react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_ProjectBanner__WEBPACK_IMPORTED_MODULE_7__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-      animationDelay: ".".concat(index * 2, "s"),
-      onTagClick: addTag,
-      key: project.title,
-      selectedTags: searchTags
-    }, project, {
+  }, _data_reads_index__WEBPACK_IMPORTED_MODULE_3___default.a.map(function (read) {
+    return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_ReadStub__WEBPACK_IMPORTED_MODULE_4__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
+      key: read.title
+    }, read, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 34
+        lineNumber: 7
       },
       __self: this
     }));
-  })));
+  }));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Projects);
+/* harmony default export */ __webpack_exports__["default"] = (Reads);
 
 /***/ }),
 
@@ -11589,14 +11243,14 @@ var SvgLogo = function SvgLogo(props) {
 
 /***/ }),
 
-/***/ 7:
-/*!***************************************************************************************************************************************************!*\
-  !*** multi next-client-pages-loader?page=%2Fprojects&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Fprojects.js ***!
-  \***************************************************************************************************************************************************/
+/***/ 10:
+/*!*********************************************************************************************************************************************!*\
+  !*** multi next-client-pages-loader?page=%2Freads&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Freads.js ***!
+  \*********************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Fprojects&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Fprojects.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Fprojects&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Fprojects.js!./");
+module.exports = __webpack_require__(/*! next-client-pages-loader?page=%2Freads&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Freads.js! */"./node_modules/next/dist/build/webpack/loaders/next-client-pages-loader.js?page=%2Freads&absolutePagePath=%2FUsers%2Femnudge%2Fworkspace%2Fkipperman%2Fnext-js%2Fpages%2Freads.js!./");
 
 
 /***/ }),
@@ -11612,5 +11266,5 @@ module.exports = dll_829b10deddf10e1653a8;
 
 /***/ })
 
-},[[7,"static/runtime/webpack.js","styles"]]]);
-//# sourceMappingURL=projects.js.map
+},[[10,"static/runtime/webpack.js","styles"]]]);
+//# sourceMappingURL=reads.js.map
