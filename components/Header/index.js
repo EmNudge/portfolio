@@ -1,5 +1,5 @@
 import Logo from "../../static/logo.svg";
-import Link from "next/Link";
+import Link from "next/link";
 import HamburgerIcon from "./hamburger-icon";
 import "./index.scss";
 

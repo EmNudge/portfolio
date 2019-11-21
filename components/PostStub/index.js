@@ -1,4 +1,4 @@
-import Link from "next/Link";
+import Link from "next/link";
 import "./index.scss";
 
 const PostStub = ({path, publishedAt, title, summary, readTime}) => (
