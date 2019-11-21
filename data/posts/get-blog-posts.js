@@ -1,6 +1,6 @@
 const path = require("path");
 const hdate = require("human-date");
-const getFiles = require("../utils/getFiles");
+const getFiles = require("../../utils/getFiles");
 
 const options = {
   rootPath: path.join(process.cwd(), "/pages/blog/"),

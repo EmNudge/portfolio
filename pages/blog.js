@@ -1,5 +1,5 @@
 import Layout from '../components/layouts/Main';
-import posts from '../posts/index'
+import posts from '../data/posts'
 import PostStub from '../components/PostStub'
 
 const Blog = () => (
