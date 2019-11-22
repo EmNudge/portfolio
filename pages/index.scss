@@ -3,6 +3,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-gap: 60px;
+  align-items: center;
   min-height: 330px;
   padding: 100px 0;
   max-width: 900px;
