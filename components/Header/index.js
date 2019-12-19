@@ -1,4 +1,4 @@
-import Logo from "../../static/logo.svg";
+import Logo from "../../public/static/logo.svg";
 import Link from "next/link";
 import HamburgerIcon from "./hamburger-icon";
 import "./index.scss";

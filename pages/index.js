@@ -1,6 +1,6 @@
 import Layout from "../components/layouts/Main";
-import Console from "../static/console.svg";
-import Waveform from "../static/waveform.svg";
+import Console from "../public/static/console.svg";
+import Waveform from "../public/static/waveform.svg";
 import codingLinks from "../data/coding-links";
 import "./index.scss";
 

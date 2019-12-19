@@ -1,7 +1,7 @@
-import Codepen from "../static/companies/codepen.svg";
-import Codesandbox from "../static/companies/codesandbox.svg";
-import Github from "../static/companies/github.svg";
-import Dev from "../static/companies/dev.svg";
+import Codepen from "../public/static/companies/codepen.svg";
+import Codesandbox from "../public/static/companies/codesandbox.svg";
+import Github from "../public/static/companies/github.svg";
+import Dev from "../public/static/companies/dev.svg";
 
 export default [
   {
