@@ -1,6 +1,7 @@
 const path = require("path");
 const hdate = require("human-date");
 const getFiles = require("../../utils/getFiles");
+const getDateFromPrettyPrint = require("../../utils/getDateFromPrettyPrint");
 
 const options = {
   rootPath: path.join(process.cwd(), "/pages/blog/"),
@@ -27,7 +28,7 @@ const options = {
     };
   },
   filterFunc: post => post.published,
-  sortFunc: (a, b) => new Date(b.publishedAt) - new Date(a.publishedAt)
+  sortFunc: (a, b) => getDateFromPrettyPrint(b.publishedAt) - getDateFromPrettyPrint(a.publishedAt)
 };
 
 module.exports = getFiles(options);
