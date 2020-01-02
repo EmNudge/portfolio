@@ -1,5 +1,5 @@
 const path = require("path");
-const hdate = require("human-date");
+const getPrettyDate = require("../../utils/getPrettyDate");
 const getFiles = require("../../utils/getFiles");
 const getDateFromPrettyPrint = require("../../utils/getDateFromPrettyPrint");
 
@@ -16,7 +16,7 @@ const options = {
     const readTime = Math.ceil(article.split(" ").length / 275);
 
     // getting the prettier version of the date supplied
-    const publishedAt = hdate.prettyPrint(post.publishedAt);
+    const publishedAt = getPrettyDate(post.publishedAt);
 
     const path = "/blog/" + fileName.replace(/\.mdx?$/, "");
 
@@ -28,7 +28,11 @@ const options = {
     };
   },
   filterFunc: post => post.published,
-  sortFunc: (a, b) => getDateFromPrettyPrint(b.publishedAt) - getDateFromPrettyPrint(a.publishedAt)
+  sortFunc(a, b) {
+    const aDate = getDateFromPrettyPrint(a.publishedAt);
+    const bDate = getDateFromPrettyPrint(b.publishedAt);
+    return bDate - aDate;
+  }
 };
 
 module.exports = getFiles(options);

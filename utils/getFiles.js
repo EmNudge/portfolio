@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-module.exports = function getFiles(options) {
+function getFiles(options) {
   // structure of the object
   const {
     rootPath,
@@ -54,3 +54,5 @@ module.exports = function getFiles(options) {
   // return a filtered or non-filtered version
   return filterFunc ? data.filter(filterFunc) : data;
 };
+
+module.exports = getFiles;
