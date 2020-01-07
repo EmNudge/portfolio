@@ -72,6 +72,7 @@ article main {
 
   p {
     margin: 40px 0;
+    line-height: 2em;
   }
 
   blockquote {
@@ -95,6 +96,10 @@ article main {
     font-size: 0.8em;
     display: block;
     margin-top: -5px;
+  }
+
+  img {
+    max-width: 85%;
   }
 }
 
