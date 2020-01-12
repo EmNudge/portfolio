@@ -1,0 +1,28 @@
+.block {
+  margin: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 60px;
+  align-items: center;
+  min-height: 330px;
+  padding: 100px 0;
+  max-width: 900px;
+
+  h1 {
+    font-weight: 400;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 1.6em;
+  }
+}
+
+.jumbotron {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  background: linear-gradient(to top right, #262d3a, #2a3243);
+  display: flex;
+  justify-content: center;
+}

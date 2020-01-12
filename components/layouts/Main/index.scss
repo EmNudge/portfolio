@@ -60,8 +60,7 @@ a {
   text-decoration: none;
 }
 a.normal,
-p a:not(.image-label),
-footer a {
+p a:not(.image-label) {
   position: relative;
   z-index: 2;
   &:after {
