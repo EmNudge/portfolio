@@ -11,7 +11,8 @@ const ArticlesSection = () => (
 				<a className="normal" href="/blog">
 					here
 				</a>, they are usually rather general in scope.
-				<br />
+			</p>
+			<p>
 				For coding-specific articles, I post to{' '}
 				<a className="normal" href="https://dev.to/emnudge">
 					dev.to

@@ -5,11 +5,11 @@ import './index.scss';
 const ProjectsSection = () => (
 	<Block>
 		<div className="icon">
-		<div className="main">
-			<a href="https://github.com/EmNudge" className="github">
-				<img src="static/companies/github.svg" alt="github" />
-			</a>
-		</div>
+			<div className="main">
+				<a href="https://github.com/EmNudge" className="github">
+					<img src="static/companies/github.svg" alt="github" />
+				</a>
+			</div>
 			<div className="lessers">
 				<a href="https://codepen.io/EmNudge/" className="codepen">
 					<img src="static/companies/codepen.svg" alt="codepen" />
@@ -34,9 +34,8 @@ const ProjectsSection = () => (
 				<a href="https://codesandbox.io/u/EmNudge/e" className="normal">
 					codesandbox
 				</a>.
-				<br />
-				I will also have some more noteable ones listed on my projects page!
 			</p>
+			<p>I will also have some more noteable ones listed on my projects page!</p>
 		</div>
 	</Block>
 );
