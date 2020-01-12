@@ -1,0 +1,49 @@
+.icon {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-gap: 30px;
+
+  .github img {
+    height: 140px;
+  }
+  .codepen img {
+    height: 80px;
+  }
+  .codesandbox img {
+    height: 120px;
+  }
+
+  // some random alignments to make it look nice
+  .github {
+    padding-right: 80px;
+  }
+  .codesandbox {
+    padding-bottom: 50px;
+  }
+
+  .codesandbox, .codepen, .github {
+    img {
+      transition: .25s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .main {
+    display: flex;
+    justify-content: center;
+  }
+  .lessers {
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .icon {
+    display: none;
+  }
+}

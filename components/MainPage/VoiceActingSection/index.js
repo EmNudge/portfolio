@@ -1,5 +1,4 @@
 import React from 'react';
-import Waveform from '../../../public/static/waveform.svg';
 import Block from '../Block';
 import './index.scss';
 
@@ -23,10 +22,8 @@ const VoiceActingSection = () => (
 				.
 			</p>
 		</div>
-		<div className="waveform">
-			<div className="svg">
-				<Waveform />
-			</div>
+		<div className="icon">
+			<img src="static/waveform.svg" alt="waveform"/>
 		</div>
 	</Block>
 );
