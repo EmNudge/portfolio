@@ -1,5 +1,6 @@
 footer {
   --opacity: .8;
+
   border-top: 1px solid #ffffff38;
 
   display: flex;
@@ -7,6 +8,7 @@ footer {
   max-width: 1200px;
   padding: 20px;
   margin: 0 auto;
+  margin-top: 80px;
   opacity: var(--opacity);
 
   .links {
