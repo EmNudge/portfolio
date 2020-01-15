@@ -1,0 +1,28 @@
+.category {
+  margin-top: 40px;
+
+  h2 {
+    font-weight: 400;
+  }
+
+  .icons {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      padding: 10px;
+      
+      img {
+        height: 50px;
+        transition: .20s;
+      }
+
+      &:hover {
+        img {
+          transform: scale(1.25);
+        }
+      }
+    }
+  }
+}

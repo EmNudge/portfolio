@@ -1,0 +1,14 @@
+.icon {
+  display: flex;
+  justify-content: center;
+
+  img {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .icon {
+    display: none;
+  }
+}

@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import Header from "../../Header";
 import Head from "../../Head";
+import Footer from '../../Footer'
 import "./index.scss";
 
 const Layout = ({ children, title, subtitle }) => {
@@ -14,6 +15,7 @@ const Layout = ({ children, title, subtitle }) => {
         <h3>{subtitle}</h3>
       </div>
       <main>{children}</main>
+      <Footer />
     </div>
   );
 };

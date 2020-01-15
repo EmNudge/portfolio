@@ -1,0 +1,31 @@
+footer {
+  --opacity: .8;
+
+  border-top: 1px solid #ffffff38;
+
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 80px;
+  opacity: var(--opacity);
+
+  .links {
+    img {
+      opacity: var(--opacity);
+      height: 20px;
+      padding: 8px;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    align-items: center;
+    flex-direction: column;
+    .links {
+      margin-bottom: 10px;
+    }
+  }
+}

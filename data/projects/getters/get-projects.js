@@ -41,7 +41,6 @@ function getBgCSS() {
 const options = {
   rootPath: path.join(process.cwd(), "/data/projects/"),
   excludeFiles: ["index.js"],
-  filterFunc: project => project.isReady,
   mutateFunc: project => ({ ...project, background: getBgCSS() })
 };
 

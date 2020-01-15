@@ -1,0 +1,48 @@
+.console {
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+  margin: 0 auto;
+
+  .svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+
+  font-family: courier;
+  padding: 55px 20px;
+  box-sizing: border-box;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: elipsis;
+
+  p {
+    font-size: 12px !important;
+  }
+
+  table {
+    margin: 20px 0;
+
+    tr:first-child td:first-child {
+      padding-right: 50px;
+    }
+  }
+
+  .cursor {
+    display: inline-block;
+    height: 16px;
+    margin: -2px 0;
+    width: 7px;
+    background: grey;
+    animation: blink 1s steps(1) infinite;
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+  }
+}

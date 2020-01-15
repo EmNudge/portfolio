@@ -1,0 +1,40 @@
+.block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 60px;
+  align-items: center;
+  min-height: 330px;
+  padding: 100px 20px;
+  max-width: 900px;
+
+  h1 {
+    font-weight: 400;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+  }
+  p {
+    font-weight: 300;
+    font-size: 1.6em;
+    margin-top: 20px;
+  }
+}
+
+.jumbotron {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  background: linear-gradient(to top right, #262d3a, #2a3243);
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 700px) {
+  .block {
+    font-size: .9em;
+    p {
+      font-size: 1.5em;
+      width: 90%;
+      line-height: 1.4em;
+    }
+  }
+}

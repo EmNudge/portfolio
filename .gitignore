@@ -64,3 +64,5 @@ typings/
 
 .firebaserc
 .firebase/
+
+out
