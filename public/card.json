@@ -1,0 +1,19 @@
+{
+  "name": "Calvin Kipperman",
+  "handle": "EmNudge",
+  "website": "https://kipperman.co",
+  "pronouns": "he/him",
+  "work": {
+    "title": "Frontend Developer",
+    "company": "Turingscraft"
+  },
+  "code": {
+    "npm": "https://www.npmjs.com/~emnudge",
+    "github": "https://github.com/emnudge"
+  },
+  "social": {
+    "twitter": "https://twitter.com/emnudge",
+    "twitch": "https://twitch.tv/emnudge",
+    "youtube": "https://www.youtube.com/channel/UCVfq6JUsVWVDg-1Ls0dW6ng"
+  }
+}
