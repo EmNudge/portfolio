@@ -1,5 +1,5 @@
 footer {
-  --opacity: .8;
+  --opacity: 0.8;
 
   border-top: 1px solid #ffffff38;
 
@@ -17,6 +17,12 @@ footer {
       height: 20px;
       padding: 8px;
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  footer {
+    margin: 0 20px;
   }
 }
 

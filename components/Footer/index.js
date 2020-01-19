@@ -16,7 +16,7 @@ const Footer = () => {
 		<footer>
 			<div className="links">
 				{links.map(({ path, name, link }) => (
-					<a href={link}>
+					<a key={path} href={link}>
 						<img src={'/static/' + path} key={name} alt={name} />
 					</a>
 				))}
